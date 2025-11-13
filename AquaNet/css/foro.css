@@ -10,14 +10,13 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
-.header {
+.encabezado {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 0;
 }
 
-.header .container {
+.encabezado .contenedor {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -33,12 +32,12 @@ body {
     margin: 0;
 }
 
-.nav {
+.navegacion {
     display: flex;
     gap: 2rem;
 }
 
-.nav a {
+.navegacion a {
     color: #333;
     text-decoration: none;
     font-weight: 500;
@@ -47,21 +46,21 @@ body {
     transition: all 0.3s;
 }
 
-.nav a.active {
+.navegacion a.activo {
     border-bottom-color: #333;
 }
 
-.nav a:hover {
+.navegacion a:hover {
     color: #2563eb;
 }
 
-.user-menu {
+.menu-usuario {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.user-icon {
+.icono-usuario {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -69,18 +68,17 @@ body {
     background: white;
 }
 
-/* Main Content */
-.main-content {
+.contenido-principal {
     padding: 2rem 0;
 }
 
-.container-fluid {
+.contenedor-fluid {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.back-link {
+.enlace-volver {
     color: #333;
     text-decoration: none;
     font-size: 0.95rem;
@@ -88,31 +86,30 @@ body {
     margin-bottom: 1rem;
 }
 
-.content-wrapper {
+.envoltorio-contenido {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 2rem;
 }
 
-/* Sidebar */
-.sidebar {
+.barra-lateral {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     padding: 1.5rem;
 }
 
-.sidebar-title {
+.titulo-barra {
     color: #2d5016;
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 700;
 }
 
-.filter-section {
+.seccion-filtro {
     margin-top: 2rem;
 }
 
-.filter-header {
+.encabezado-filtro {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -120,15 +117,15 @@ body {
     font-weight: 600;
 }
 
-.filter-icon {
+.icono-filtro {
     font-size: 1.2rem;
 }
 
-.filter-group {
+.grupo-filtro {
     margin-bottom: 1rem;
 }
 
-.filter-toggle {
+.boton-filtro {
     width: 100%;
     background: white;
     border: none;
@@ -139,63 +136,60 @@ body {
     cursor: pointer;
     font-weight: 600;
     border-radius: 4px;
-    transition: background 0.2s;
 }
 
-.filter-toggle:hover {
+.boton-filtro:hover {
     background: #f5f5f5;
 }
 
-.arrow {
+.flecha {
     transition: transform 0.3s;
 }
 
-.filter-toggle.open .arrow {
+.boton-filtro.abierto .flecha {
     transform: rotate(180deg);
 }
 
-.filter-options {
+.opciones-filtro {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
 
-.filter-options.active {
+.opciones-filtro.activo {
     max-height: 500px;
     margin-top: 0.5rem;
 }
 
-.filter-option {
+.opcion-filtro {
     display: flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
-    transition: background 0.2s;
 }
 
-.filter-option:hover {
+.opcion-filtro:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.filter-option input {
+.opcion-filtro input {
     margin-right: 0.5rem;
     cursor: pointer;
 }
 
-/* Forum Section */
-.forum-section {
+.seccion-foro {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     padding: 1.5rem;
 }
 
-.search-bar {
+.barra-busqueda {
     margin-bottom: 1.5rem;
     display: flex;
     justify-content: flex-end;
 }
 
-.search-input {
+.campo-busqueda {
     padding: 0.6rem 1rem;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -203,12 +197,12 @@ body {
     font-size: 0.95rem;
 }
 
-.search-input:focus {
+.campo-busqueda:focus {
     outline: none;
     border-color: #2563eb;
 }
 
-.forum-header {
+.encabezado-foro {
     background: #8b9aaa;
     padding: 1rem 1.5rem;
     border-radius: 8px 8px 0 0;
@@ -218,19 +212,18 @@ body {
     color: white;
 }
 
-.forum-header h3 {
+.encabezado-foro h3 {
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.forum-stats {
+.estadisticas-foro {
     display: flex;
     gap: 8rem;
     font-size: 0.95rem;
 }
 
-/* Forum Post */
-.forum-post {
+.publicacion-foro {
     background: white;
     padding: 1.5rem;
     border-bottom: 1px solid #e5e7eb;
@@ -240,63 +233,63 @@ body {
     align-items: center;
 }
 
-.post-header {
+.encabezado-publicacion {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.user-avatar {
+.avatar-usuario {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     background: #333;
 }
 
-.username {
+.nombre-usuario {
     font-size: 0.85rem;
     color: #666;
 }
 
-.post-content {
+.contenido-publicacion {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.post-title {
+.titulo-publicacion {
     font-size: 1rem;
     font-weight: 600;
     color: #4a5568;
 }
 
-.post-time {
+.tiempo-publicacion {
     font-size: 0.85rem;
     color: #666;
 }
 
-.post-stats {
+.estadisticas-publicacion {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.stat {
+.dato {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.stat-number {
+.numero-dato {
     font-weight: 600;
     color: #333;
 }
 
-.stat-icon {
+.icono-dato {
     font-size: 1.2rem;
 }
 
-.share-btn {
+.boton-compartir {
     background: none;
     border: none;
     cursor: pointer;
@@ -305,12 +298,11 @@ body {
     transition: transform 0.2s;
 }
 
-.share-btn:hover {
+.boton-compartir:hover {
     transform: scale(1.1);
 }
 
-/* Publish Button */
-.publish-btn {
+.boton-publicar {
     background: #3b5998;
     color: white;
     border: none;
@@ -321,51 +313,47 @@ body {
     cursor: pointer;
     margin-top: 2rem;
     float: right;
-    transition: background 0.3s;
 }
 
-.publish-btn:hover {
+.boton-publicar:hover {
     background: #2d4373;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
 
-/* Tablets y pantallas medianas (hasta 1024px) */
 @media (max-width: 1024px) {
-    .header .container {
+    .encabezado .contenedor {
         padding: 0 1.5rem;
     }
     
-    .container-fluid {
+    .contenedor-fluid {
         padding: 0 1.5rem;
     }
     
-    .content-wrapper {
+    .envoltorio-contenido {
         grid-template-columns: 220px 1fr;
         gap: 1.5rem;
     }
     
-    .sidebar {
+    .barra-lateral {
         padding: 1rem;
     }
     
-    .sidebar-title {
+    .titulo-barra {
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
     }
     
-    .nav {
+    .navegacion {
         gap: 1.5rem;
     }
     
-    .forum-stats {
+    .estadisticas-foro {
         gap: 5rem;
     }
 }
 
-/* Tablets pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    .header .container {
+    .encabezado .contenedor {
         flex-wrap: wrap;
         gap: 1rem;
         padding: 0 1rem;
@@ -375,7 +363,7 @@ body {
         font-size: 1.5rem;
     }
     
-    .nav {
+    .navegacion {
         order: 3;
         width: 100%;
         justify-content: center;
@@ -384,79 +372,78 @@ body {
         flex-wrap: wrap;
     }
     
-    .user-menu {
+    .menu-usuario {
         order: 2;
     }
     
-    .container-fluid {
+    .contenedor-fluid {
         padding: 0 1rem;
     }
     
-    .content-wrapper {
+    .envoltorio-contenido {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     
-    .sidebar {
+    .barra-lateral {
         order: 2;
     }
     
-    .forum-section {
+    .seccion-foro {
         order: 1;
         padding: 1rem;
     }
     
-    .search-bar {
+    .barra-busqueda {
         justify-content: stretch;
     }
     
-    .search-input {
+    .campo-busqueda {
         width: 100%;
     }
     
-    .forum-header {
+    .encabezado-foro {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
         padding: 1rem;
     }
     
-    .forum-stats {
+    .estadisticas-foro {
         gap: 3rem;
         font-size: 0.85rem;
     }
     
-    .forum-post {
+    .publicacion-foro {
         grid-template-columns: 1fr;
         gap: 0.75rem;
         padding: 1rem;
     }
     
-    .post-content {
+    .contenido-publicacion {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
     
-    .post-stats {
+    .estadisticas-publicacion {
         justify-content: flex-start;
         gap: 1.5rem;
     }
     
-    .publish-btn {
+    .boton-publicar {
         float: none;
         width: 100%;
         margin-top: 1rem;
     }
 }
 
-/* Móviles (hasta 480px) */
 @media (max-width: 480px) {
-    .header {
+    .encabezado {
         padding: 0.75rem 0;
     }
     
-    .header .container {
+    .encabezado .contenedor {
         padding: 0 0.75rem;
     }
     
@@ -464,142 +451,141 @@ body {
         font-size: 1.3rem;
     }
     
-    .nav {
+    .navegacion {
         gap: 0.5rem;
         font-size: 0.8rem;
     }
     
-    .nav a {
+    .navegacion a {
         padding: 0.3rem 0;
     }
     
-    .user-menu span {
+    .menu-usuario span {
         font-size: 0.85rem;
     }
     
-    .user-icon {
+    .icono-usuario {
         width: 30px;
         height: 30px;
     }
     
-    .main-content {
+    .contenido-principal {
         padding: 1rem 0;
     }
     
-    .container-fluid {
+    .contenedor-fluid {
         padding: 0 0.75rem;
     }
     
-    .back-link {
+    .enlace-volver {
         font-size: 0.85rem;
         margin-bottom: 0.75rem;
     }
     
-    .sidebar {
+    .barra-lateral {
         padding: 0.75rem;
     }
     
-    .sidebar-title {
+    .titulo-barra {
         font-size: 1.4rem;
         margin-bottom: 1rem;
     }
     
-    .filter-toggle {
+    .boton-filtro {
         padding: 0.6rem;
         font-size: 0.9rem;
     }
     
-    .filter-option {
+    .opcion-filtro {
         padding: 0.4rem 0.6rem;
         font-size: 0.9rem;
     }
     
-    .forum-section {
+    .seccion-foro {
         padding: 0.75rem;
     }
     
-    .forum-header {
+    .encabezado-foro {
         padding: 0.75rem;
     }
     
-    .forum-header h3 {
+    .encabezado-foro h3 {
         font-size: 1rem;
     }
     
-    .forum-stats {
+    .estadisticas-foro {
         gap: 2rem;
         font-size: 0.8rem;
     }
     
-    .forum-post {
+    .publicacion-foro {
         padding: 0.75rem;
     }
     
-    .user-avatar {
+    .avatar-usuario {
         width: 28px;
         height: 28px;
     }
     
-    .username {
+    .nombre-usuario {
         font-size: 0.75rem;
     }
     
-    .post-title {
+    .titulo-publicacion {
         font-size: 0.9rem;
     }
     
-    .post-time {
+    .tiempo-publicacion {
         font-size: 0.75rem;
     }
     
-    .stat {
+    .dato {
         gap: 0.3rem;
     }
     
-    .stat-number {
+    .numero-dato {
         font-size: 0.9rem;
     }
     
-    .stat-icon {
+    .icono-dato {
         font-size: 1rem;
     }
     
-    .share-btn {
+    .boton-compartir {
         font-size: 1rem;
     }
     
-    .post-stats {
+    .estadisticas-publicacion {
         gap: 1rem;
     }
     
-    .publish-btn {
+    .boton-publicar {
         padding: 0.65rem 2rem;
         font-size: 0.85rem;
     }
 }
 
-/* Móviles muy pequeños (hasta 360px) */
 @media (max-width: 360px) {
     .logo {
         font-size: 1.2rem;
     }
     
-    .nav {
+    .navegacion {
         font-size: 0.75rem;
         gap: 0.3rem;
     }
     
-    .sidebar-title {
+    .titulo-barra {
         font-size: 1.2rem;
     }
     
-    .forum-stats {
+    .estadisticas-foro {
         flex-direction: column;
         gap: 0.5rem;
         align-items: flex-start;
     }
     
-    .post-stats {
+    .estadisticas-publicacion {
         flex-wrap: wrap;
     }
 }

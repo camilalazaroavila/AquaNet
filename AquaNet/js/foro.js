@@ -1,75 +1,71 @@
-function toggleFilter(filterId) {
-    const filterOptions = document.getElementById(filterId);
-    const filterToggle = filterOptions.previousElementSibling;
+function alternarFiltro(idFiltro) {
+    const opcionesFiltro = document.getElementById(idFiltro);
+    const botonFiltro = opcionesFiltro.previousElementSibling;
     
-    filterOptions.classList.toggle('active');
-    filterToggle.classList.toggle('open');
+    opcionesFiltro.classList.toggle('activo');
+    botonFiltro.classList.toggle('abierto');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('.search-input');
+    const campoBusqueda = document.querySelector('.campo-busqueda');
     
-    if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const posts = document.querySelectorAll('.forum-post');
+    if (campoBusqueda) {
+        campoBusqueda.addEventListener('input', function(e) {
+            const termino = e.target.value.toLowerCase();
+            const publicaciones = document.querySelectorAll('.publicacion-foro');
             
-            posts.forEach(post => {
-                const title = post.querySelector('.post-title').textContent.toLowerCase();
-                if (title.includes(searchTerm)) {
-                    post.style.display = 'grid';
-                } else {
-                    post.style.display = 'none';
-                }
+            publicaciones.forEach(publi => {
+                const titulo = publi.querySelector('.titulo-publicacion').textContent.toLowerCase();
+                publi.style.display = titulo.includes(termino) ? 'grid' : 'none';
             });
         });
     }
 
-    const filterCheckboxes = document.querySelectorAll('.filter-option input');
+    const casillasFiltro = document.querySelectorAll('.opcion-filtro input');
     
-    filterCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', applyFilters);
+    casillasFiltro.forEach(casilla => {
+        casilla.addEventListener('change', aplicarFiltros);
     });
 });
 
-function applyFilters() {
-    const checkedZonas = Array.from(document.querySelectorAll('.filter-option input:checked'))
+function aplicarFiltros() {
+    const zonasSeleccionadas = Array.from(document.querySelectorAll('.opcion-filtro input:checked'))
         .map(cb => cb.value);
     
-    const posts = document.querySelectorAll('.forum-post');
+    const publicaciones = document.querySelectorAll('.publicacion-foro');
     
-    if (checkedZonas.length === 0) {
-        posts.forEach(post => post.style.display = 'grid');
+    if (zonasSeleccionadas.length === 0) {
+        publicaciones.forEach(publi => publi.style.display = 'grid');
         return;
     }
     
-    posts.forEach(post => {
-        const title = post.querySelector('.post-title').textContent.toLowerCase();
-        const shouldShow = checkedZonas.some(zona => 
-            title.includes(zona.replace('-', ' '))
+    publicaciones.forEach(publi => {
+        const titulo = publi.querySelector('.titulo-publicacion').textContent.toLowerCase();
+        const mostrar = zonasSeleccionadas.some(zona => 
+            titulo.includes(zona.replace('-', ' '))
         );
         
-        post.style.display = shouldShow ? 'grid' : 'none';
+        publi.style.display = mostrar ? 'grid' : 'none';
     });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const publishBtn = document.querySelector('.publish-btn');
+    const botonPublicar = document.querySelector('.boton-publicar');
     
-    if (publishBtn) {
-        publishBtn.addEventListener('click', function() {
-            alert('Funcionalidad de publicación - Aquí se abriría un modal para crear una nueva publicación');
+    if (botonPublicar) {
+        botonPublicar.addEventListener('click', function() {
+            alert('Funcionalidad de publicación: aquí se abriría un formulario o modal para crear una nueva publicación.');
         });
     }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const shareButtons = document.querySelectorAll('.share-btn');
+    const botonesCompartir = document.querySelectorAll('.boton-compartir');
     
-    shareButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+    botonesCompartir.forEach(boton => {
+        boton.addEventListener('click', function(e) {
             e.stopPropagation();
-            alert('Funcionalidad de compartir - Aquí se copiaría el enlace de la publicación');
+            alert('Funcionalidad de compartir: aquí se copiaría el enlace de la publicación.');
         });
     });
 });

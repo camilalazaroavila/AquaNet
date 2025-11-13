@@ -7,133 +7,132 @@
     <link rel="stylesheet" href="/AquaNet/css/foro.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="encabezado">
+        <div class="contenedor">
             <h1 class="logo">AquaNet</h1>
-            <nav class="nav">
+            <nav class="navegacion">
                 <a href="#voluntariados">Voluntariados</a>
-                <a href="#foro" class="active">Foro</a>
+                <a href="#foro" class="activo">Foro</a>
                 <a href="#donaciones">Donaciones</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
-            <div class="user-menu">
+            <div class="menu-usuario">
                 <span>Usuario</span>
-                <div class="user-icon"></div>
+                <div class="icono-usuario"></div>
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="container-fluid">
-            <a href="#" class="back-link">< Volver</a>
+    <main class="contenido-principal">
+        <div class="contenedor-fluid">
+            <a href="#" class="enlace-volver">< Volver</a>
 
-            <div class="content-wrapper">
-                <aside class="sidebar">
-                    <h2 class="sidebar-title">Foro</h2>
-                    
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span class="filter-icon"></span> 
-       <!-- agregar imanges d los icocno s q faltan -->
-                                    <span>Filtrar por</span>
+            <div class="envoltorio-contenido">
+                <aside class="barra-lateral">
+                    <h2 class="titulo-barra">Foro</h2>
+                    <!-- hay q ponerle imagens de conosi-->
+                    <div class="seccion-filtro">
+                        <div class="encabezado-filtro">
+                            <span class="icono-filtro"></span> 
+                            <span>Filtrar por</span>
                         </div>
 
-                        <div class="filter-group">
-                            <button class="filter-toggle" onclick="toggleFilter('zona')">
+                        <div class="grupo-filtro">
+                            <button class="boton-filtro" onclick="alternarFiltro('zona')">
                                 <span>Zona</span>
-                                <span class="arrow">▼</span>
+                                <span class="flecha">▼</span>
                             </button>
-                            <div id="zona" class="filter-options active">
-                                <label class="filter-option">
+                            <div id="zona" class="opciones-filtro activo">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="lavalle">
                                     <span>Lavalle</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="general-alvear">
                                     <span>General Alvear</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="ciudad-mendoza">
                                     <span>Ciudad de Mendoza</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="godoy-cruz">
                                     <span>Godoy Cruz</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="guaymallen">
-                                    <span>Guaymallen</span>
+                                    <span>Guaymallén</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="las-heras">
                                     <span>Las Heras</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="lujan-cuyo">
-                                    <span>Lújan de Cuyo</span>
+                                    <span>Luján de Cuyo</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="maipu">
                                     <span>Maipú</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="tunuyan">
                                     <span>Tunuyán</span>
                                 </label>
-                                <label class="filter-option">
+                                <label class="opcion-filtro">
                                     <input type="checkbox" name="zona" value="san-carlos">
                                     <span>San Carlos</span>
                                 </label>
                             </div>
                         </div>
 
-                        <div class="filter-group">
-                            <button class="filter-toggle" onclick="toggleFilter('problema')">
+                        <div class="grupo-filtro">
+                            <button class="boton-filtro" onclick="alternarFiltro('problema')">
                                 <span>Problema</span>
-                                <span class="arrow">▼</span>
+                                <span class="flecha">▼</span>
                             </button>
-                            <div id="problema" class="filter-options">
+                            <div id="problema" class="opciones-filtro">
                             </div>
                         </div>
                     </div>
                 </aside>
 
-                <section class="forum-section">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Buscar..." class="search-input">
+                <section class="seccion-foro">
+                    <div class="barra-busqueda">
+                        <input type="text" placeholder="Buscar..." class="campo-busqueda">
                     </div>
 
-                    <div class="forum-header">
+                    <div class="encabezado-foro">
                         <h3>Últimas publicaciones</h3>
-                        <div class="forum-stats">
+                        <div class="estadisticas-foro">
                             <span>Vistos</span>
                             <span>Comentarios</span>
                         </div>
                     </div>
 
-                    <article class="forum-post">
-                        <div class="post-header">
-                            <div class="user-avatar"></div>
-                            <span class="username">Tiara Martinez</span>
+                    <article class="publicacion-foro">
+                        <div class="encabezado-publicacion">
+                            <div class="avatar-usuario"></div>
+                            <span class="nombre-usuario">Tiara Martinez</span>
                         </div>
-                        <div class="post-content">
-                            <h4 class="post-title">Corte de agua en Las Heras</h4>
-                            <span class="post-time">Hace 2 horas</span>
+                        <div class="contenido-publicacion">
+                            <h4 class="titulo-publicacion">Corte de agua en Las Heras</h4>
+                            <span class="tiempo-publicacion">Hace 2 horas</span>
                         </div>
-                        <div class="post-stats">
-                            <div class="stat">
-                                <span class="stat-number">58</span>
-                                <span class="stat-icon">👁</span>
+                        <div class="estadisticas-publicacion">
+                            <div class="dato">
+                                <span class="numero-dato">58</span>
+                                <span class="icono-dato">👁</span>
                             </div>
-                            <div class="stat">
-                                <span class="stat-number">123</span>
+                            <div class="dato">
+                                <span class="numero-dato">123</span>
                             </div>
-                            <button class="share-btn">🔗</button>
+                            <button class="boton-compartir">🔗</button>
                         </div>
                     </article>
 
-                    <button class="publish-btn">PUBLICAR</button>
+                    <button class="boton-publicar">PUBLICAR</button>
                 </section>
             </div>
         </div>

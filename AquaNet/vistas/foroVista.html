@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaNet - Foro</title>
+    <link rel="stylesheet" href="/AquaNet/css/foro.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">AquaNet</h1>
+            <nav class="nav">
+                <a href="#voluntariados">Voluntariados</a>
+                <a href="#foro" class="active">Foro</a>
+                <a href="#donaciones">Donaciones</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#ayuda">Ayuda</a>
+            </nav>
+            <div class="user-menu">
+                <span>Usuario</span>
+                <div class="user-icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container-fluid">
+            <a href="#" class="back-link">< Volver</a>
+
+            <div class="content-wrapper">
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">Foro</h2>
+                    
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <span class="filter-icon"></span> 
+       <!-- agregar imanges d los icocno s q faltan -->
+                                    <span>Filtrar por</span>
+                        </div>
+
+                        <div class="filter-group">
+                            <button class="filter-toggle" onclick="toggleFilter('zona')">
+                                <span>Zona</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div id="zona" class="filter-options active">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="lavalle">
+                                    <span>Lavalle</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="general-alvear">
+                                    <span>General Alvear</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="ciudad-mendoza">
+                                    <span>Ciudad de Mendoza</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="godoy-cruz">
+                                    <span>Godoy Cruz</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="guaymallen">
+                                    <span>Guaymallen</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="las-heras">
+                                    <span>Las Heras</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="lujan-cuyo">
+                                    <span>Lújan de Cuyo</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="maipu">
+                                    <span>Maipú</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="tunuyan">
+                                    <span>Tunuyán</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="zona" value="san-carlos">
+                                    <span>San Carlos</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <button class="filter-toggle" onclick="toggleFilter('problema')">
+                                <span>Problema</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div id="problema" class="filter-options">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="forum-section">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar..." class="search-input">
+                    </div>
+
+                    <div class="forum-header">
+                        <h3>Últimas publicaciones</h3>
+                        <div class="forum-stats">
+                            <span>Vistos</span>
+                            <span>Comentarios</span>
+                        </div>
+                    </div>
+
+                    <article class="forum-post">
+                        <div class="post-header">
+                            <div class="user-avatar"></div>
+                            <span class="username">Tiara Martinez</span>
+                        </div>
+                        <div class="post-content">
+                            <h4 class="post-title">Corte de agua en Las Heras</h4>
+                            <span class="post-time">Hace 2 horas</span>
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat">
+                                <span class="stat-number">58</span>
+                                <span class="stat-icon">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">123</span>
+                            </div>
+                            <button class="share-btn">🔗</button>
+                        </div>
+                    </article>
+
+                    <button class="publish-btn">PUBLICAR</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="/AquaNet/js/foro.js"></script>
+</body>
+</html>

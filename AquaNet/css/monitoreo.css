@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(180deg, #d4e3f7 0%, #e8f0fc 100%);
+    min-height: 100vh;
+}
+
+.encabezado {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.encabezado .contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #2563eb;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.navegacion {
+    display: flex;
+    gap: 2rem;
+}
+
+.navegacion a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.navegacion a.activo {
+    border-bottom-color: #333;
+}
+
+.navegacion a:hover {
+    color: #2563eb;
+}
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icono-usuario {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background: white;
+}
+
+.contenido-principal {
+    padding: 2rem 0;
+}
+
+.contenedor-fluido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.enlace-volver {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.banner-principal {
+    background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)), 
+                linear-gradient(135deg, #4a7c2c 0%, #5a8c3c 100%);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contenido-banner h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.contenido-banner p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.seccion-informacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.columna-info {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.encabezado-seccion {
+    margin-bottom: 1.5rem;
+}
+
+.encabezado-seccion h2 {
+    color: #2d5016;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.lista-objetivos,
+.lista-pasos {
+    list-style: none;
+}
+
+.lista-objetivos li,
+.lista-pasos li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.icono-lista {
+    color: #2563eb;
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+}
+
+.numero-paso {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: white;
+    border: 2px solid #2563eb;
+    border-radius: 50%;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.seccion-resenas {
+    margin-bottom: 3rem;
+}
+
+.titulo-resenas {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2d5016;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.grilla-resenas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-resena {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-resena:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.titulo-tarjeta {
+    color: #2d5016;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.avatar-usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+    flex-shrink: 0;
+}
+
+.datos-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-usuario {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.verificado {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.texto-resena {
+    color: #4a5568;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.estrellas {
+    color: #fbbf24;
+    font-size: 1rem;
+}
+
+.enlace-todas {
+    display: block;
+    text-align: right;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.enlace-todas:hover {
+    text-decoration: underline;
+}
+
+.contenedor-boton {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.boton-inscribirse {
+    background: #2d5016;
+    color: white;
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.boton-inscribirse:hover {
+    background: #234012;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1024px) {
+    .grilla-resenas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .seccion-informacion {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado .contenedor {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .navegacion {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
+    
+    .contenedor-fluido {
+        padding: 0 1rem;
+    }
+    
+    .banner-principal {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contenido-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contenido-banner p {
+        font-size: 1rem;
+    }
+    
+    .seccion-informacion {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .grilla-resenas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .boton-inscribirse {
+        padding: 0.9rem 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .navegacion {
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+    
+    .banner-principal {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contenido-banner h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contenido-banner p {
+        font-size: 0.9rem;
+    }
+    
+    .columna-info {
+        padding: 1.5rem;
+    }
+    
+    .encabezado-seccion h2 {
+        font-size: 1.3rem;
+    }
+    
+    .titulo-resenas {
+        font-size: 1.5rem;
+    }
+    
+    .boton-inscribirse {
+        width: 100%;
+        padding: 0.85rem 2rem;
+    }
+}

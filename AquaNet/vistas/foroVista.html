@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaNet - Foro</title>
     <link rel="stylesheet" href="/AquaNet/css/foro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header class="encabezado">
@@ -19,13 +20,13 @@
             </nav>
             <div class="usuario">
                 <span>Usuario</span>
-                <div class="icono-usuario">👤</div>
+                <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
             </div>
         </div>
     </header>
 
     <main class="contenido-principal">
-        <a href="#" class="btn-volver">← Volver</a>
+        <a href="/AquaNet/vistas/home.html" class="btn-volver">← Volver</a>
 
         <div class="contenedor-foro">
             <aside class="barra-lateral">
@@ -33,7 +34,8 @@
                 
                 <div class="seccion-filtros">
                     <div class="encabezado-filtro">
-                        <img src="/AquaNet/img/filter.svg" alt="Filtrar">
+                       <!-- <img src="/AquaNet/img/filter.svg" alt="Filtrar"> -->
+                        <i class="fa-solid fa-arrow-down-short-wide"></i>
                         <span>Filtrar por</span>
                     </div>
 
@@ -68,11 +70,11 @@
                 </div>
             </aside>
 
+           
             <section class="area-publicaciones">
-                <!-- agregar foto icono -->
                 <button class="btn-agregar-publicacion">
-                    <img src="/AquaNet/img/edit-solid.svg" alt="">
-                </button>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button> 
 
                 <div class="barra-superior">
                     <div class="pestanas">
@@ -82,13 +84,15 @@
                     </div>
                     <div class="busqueda">
                         <input type="text" placeholder="Buscar..." class="input-busqueda">
-                        <img src="/AquaNet/img/search.svg" alt="Buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
 
                 <div class="lista-publicaciones">
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario">
+                           <i class="fa-solid fa-user"></i>
+                        </div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Nara Martínez</p>
                             <h3 class="titulo-publicacion">Corte de agua en Las Heras</h3>
@@ -97,18 +101,18 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">23</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">12</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
 
-                    <!-- poner iconos en vez d emojis -->
+                    
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario"><i class="fa-solid fa-user"></i></i></div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Juan Pérez</p>
                             <h3 class="titulo-publicacion">Baja presión en Maipú ¿a alg...</h3>
@@ -117,17 +121,17 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">98</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">22</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
 
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Sonia Gallardo</p>
                             <h3 class="titulo-publicacion">Problemas con la turbidez d...</h3>
@@ -136,17 +140,17 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">58</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">15</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
 
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Franco Rodríguez</p>
                             <h3 class="titulo-publicacion">Corte de agua programado...</h3>
@@ -155,17 +159,17 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">121</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">82</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
 
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Nara Martínez</p>
                             <h3 class="titulo-publicacion">Aviso: interrupción por mant...</h3>
@@ -174,17 +178,17 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">386</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">117</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
 
                     <article class="publicacion">
-                        <div class="avatar-usuario">👤</div>
+                        <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Beatriz Sosa</p>
                             <h3 class="titulo-publicacion">Consulta sobre calidad...</h3>
@@ -193,13 +197,13 @@
                         <div class="estadisticas">
                             <div class="stat">
                                 <span class="numero">45</span>
-                                <span class="icono">👁</span>
+                                <span class="icono"><i class="fa-solid fa-eye"></i></span>
                             </div>
                             <div class="stat">
                                 <span class="numero">8</span>
                             </div>
                         </div>
-                        <button class="btn-compartir">🔗</button>
+                        <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
                 </div>
             </section>

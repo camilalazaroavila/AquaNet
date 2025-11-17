@@ -192,8 +192,9 @@ body {
 }
 
 .btn-agregar-publicacion {
-    position: absolute;
-    top: 1.5rem;
+    /*position: absolute;*/
+    position: fixed;
+    top: 32rem;
     right: 1.5rem;
     width: 50px;
     height: 50px;
@@ -206,7 +207,7 @@ body {
     justify-content: center;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     transition: all 0.3s ease;
-    z-index: 10;
+    z-index: 9999;
 }
 
 .btn-agregar-publicacion:hover {
@@ -283,7 +284,7 @@ body {
     color: #64748b;
 }
 
-.busqueda img {
+.fa-solid.fa-magnifying-glass {
     position: absolute;
     right: 1rem;
     width: 18px;

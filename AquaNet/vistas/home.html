@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/AquaNet/css/foro.css">
+    <link rel="stylesheet" href="/AquaNet/css/home.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+<header class="encabezado">
+        <div class="contenedor">
+            <h1 class="logo">AquaNet</h1>
+            <nav class="navegacion">
+                <a href="#voluntariados">Voluntariados</a>
+                <a href="#foro" class="activo">Foro</a>
+                <a href="#donaciones">Donaciones</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#ayuda">Ayuda</a>
+            </nav>
+            <div class="menu-usuario">
+                <span>Usuario</span>
+                <div class="icono-usuario"></div>
+            </div>
+        </div>
+    </header>
+        
+<div class="titulo-pagina">
+    <h2 id="texto-titulo"> Conoce el estado del agua donde vivis</h2>
+
+    <form id="search-form" method="get">
+        <fieldset>
+            <div class="search-box">
+                <img class="search-img" src="../img/lupa.png" alt="">
+                <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<br>
+
+<div class="contenedor-mapa">
+<gmp-map
+    center="38.7946,-106.5348"
+    zoom="4"
+    map-id="DEMO_MAP_ID"
+    style="height: 400px; width: 100%;"></gmp-map>
+</div>
+
+<div class="filtros-container">
+
+    <div class="filtros-box">
+        <h3>Filtrar búsqueda</h3>
+
+        <div class="filtro-grupo">
+            <label class="check-item">
+                <input type="checkbox" checked>
+                Cortes programados
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox">
+                Zonas con más reportes
+            </label>
+        </div>
+
+        <div class="filtro-grupo">
+            <label class="radio-item">
+                <input type="checkbox" checked>
+                Caudal actual
+            </label>
+
+            <label class="radio-item">
+                <input type="radio" name="caudal">
+                Poco caudal
+            </label>
+
+            <label class="radio-item">
+                <input type="radio" name="caudal">
+                Caudal normal
+            </label>
+
+            <label class="radio-item">
+                <input type="radio" name="caudal" checked>
+                Caudal alto
+            </label>
+        </div>
+    </div>
+
+    <div class="botones-laterales">
+        <button class="btn-reportar">
+            <img src="../img/reportar.png" class="icono-boton" alt="">
+            REPORTAR<br>PROBLEMA
+        </button>
+
+        <button class="btn-caudal">
+            <img src="../img/caudal.png" class="icono-boton" alt="">
+            CAUDAL
+        </button>
+    </div>
+
+</div>
+
+
+</body>
+
+
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
+  </script>
+<script src="/AquaNet/js/home.js"></script>
+
+
+</html>

@@ -1,3 +1,4 @@
+/* Reset y estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -5,227 +6,219 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(180deg, #d4e3f7 0%, #e8f0fc 100%);
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d4dfe8;
+    color: #333;
 }
 
+/* Header */
 .encabezado {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.encabezado .contenedor {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.contenedor-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.btn-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2563eb;
+    padding: 0.5rem;
 }
 
 .logo {
-    color: #2563eb;
     font-size: 1.8rem;
-    font-weight: 700;
-    margin: 0;
+    color: #2563eb;
+    font-weight: bold;
 }
 
 .navegacion {
     display: flex;
     gap: 2rem;
+    flex: 1;
+    justify-content: center;
 }
 
 .navegacion a {
-    color: #333;
     text-decoration: none;
+    color: #555;
     font-weight: 500;
-    padding: 0.5rem 0;
-    border-bottom: 3px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     transition: all 0.3s;
 }
 
-.navegacion a.activo {
-    border-bottom-color: #333;
-}
-
 .navegacion a:hover {
-    color: #2563eb;
+    background-color: #f0f4f8;
 }
 
-.menu-usuario {
+.navegacion a.activo {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+.usuario {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 .icono-usuario {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+    background-color: #94a3b8;
     border-radius: 50%;
-    border: 2px solid #333;
-    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
+/* Contenido Principal */
 .contenido-principal {
-    padding: 2rem 0;
-}
-
-.contenedor-fluido {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
 }
 
-.enlace-volver {
-    color: #333;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-.grilla-voluntariados {
+/* Grid de Voluntariados */
+.grid-voluntariados {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
+/* Tarjeta de Voluntariado */
 .tarjeta-voluntariado {
-    background: white;
-    border-radius: 12px;
+    position: relative;
+    height: 280px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .tarjeta-voluntariado:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-.imagen-tarjeta {
+/* Imagen de Fondo */
+.imagen-fondo {
     width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.imagen-cercanos {
-    background: linear-gradient(rgba(45, 80, 22, 0.6), rgba(45, 80, 22, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%234a7c2c" width="400" height="200"/></svg>');
+/* Overlay oscuro sobre la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
 }
 
-.imagen-limpieza {
-    background: linear-gradient(rgba(60, 90, 40, 0.6), rgba(60, 90, 40, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%235a8c3c" width="400" height="200"/></svg>');
-}
-
-.imagen-educacion {
-    background: linear-gradient(rgba(50, 75, 35, 0.6), rgba(50, 75, 35, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23527a38" width="400" height="200"/></svg>');
-}
-
-.imagen-monitoreo {
-    background: linear-gradient(rgba(45, 80, 22, 0.6), rgba(45, 80, 22, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%234a7c2c" width="400" height="200"/></svg>');
-}
-
-.imagen-apoyo {
-    background: linear-gradient(rgba(55, 85, 38, 0.6), rgba(55, 85, 38, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23598540" width="400" height="200"/></svg>');
-}
-
-.imagen-tecnologia {
-    background: linear-gradient(rgba(65, 95, 45, 0.6), rgba(65, 95, 45, 0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23659548" width="400" height="200"/></svg>');
-}
-
+/* Contenido de la Tarjeta */
 .contenido-tarjeta {
-    padding: 1.5rem;
-}
-
-.contenido-tarjeta h2 {
-    color: #2d5016;
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-}
-
-.contenido-tarjeta p {
-    color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-    font-size: 0.95rem;
-}
-
-.boton-ver-mas {
-    display: inline-block;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: white;
-    background: #3b5998;
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
+}
+
+.titulo-tarjeta {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.descripcion-tarjeta {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+.btn-ver-mas {
+    align-self: flex-end;
     text-decoration: none;
+    color: white;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: transform 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.boton-ver-mas:hover {
-    background: #2d4373;
+.btn-ver-mas:hover {
+    transform: translateX(5px);
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
-    .grilla-voluntariados {
+    .grid-voluntariados {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .tarjeta-voluntariado {
+        height: 260px;
     }
 }
 
 @media (max-width: 768px) {
-    .encabezado .contenedor {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
     .navegacion {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 1rem;
-        font-size: 0.9rem;
-        flex-wrap: wrap;
+        display: none;
     }
-    
-    .grilla-voluntariados {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .contenedor-fluido {
-        padding: 0 1rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.4rem;
+    .contenido-principal {
+        padding: 2rem 1rem;
     }
-    
-    .navegacion {
-        font-size: 0.8rem;
-        gap: 0.5rem;
+
+    .tarjeta-voluntariado {
+        height: 240px;
     }
-    
-    .contenido-tarjeta h2 {
-        font-size: 1.2rem;
+
+    .titulo-tarjeta {
+        font-size: 1.5rem;
     }
-    
-    .contenido-tarjeta p {
-        font-size: 0.9rem;
+
+    .descripcion-tarjeta {
+        font-size: 0.95rem;
     }
-    
-    .imagen-tarjeta {
-        height: 150px;
+
+    .contenido-tarjeta {
+        padding: 1.5rem;
     }
 }

@@ -1,148 +1,180 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/AquaNet/css/foro.css">
     <link rel="stylesheet" href="/AquaNet/css/home.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>AquaNet - Home</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+ 
+    <title>Document</title>
 </head>
 <body>
-    <header class="encabezado">
+ 
+   
+<header class="encabezado">
         <div class="contenedor">
-            <button class="btn-menu">☰</button>
-            <a href="/AquaNet/vistas/home.html" class="logo">AquaNet</a>
+            <h1 class="logo">AquaNet</h1>
             <nav class="navegacion">
-                <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
-                <a href="#nosotros">Nosotros</a>
+                <a href="#voluntariados">Voluntariados</a>
                 <a href="/AquaNet/vistas/foroVista.html">Foro</a>
+                <a href="#donaciones">Donaciones</a>
+                <a href="#nosotros">Nosotros</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
-            <div class="usuario">
+            <div class="menu-usuario">
                 <span>Usuario</span>
                 <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
+ 
             </div>
         </div>
     </header>
-
-    <section class="seccion-titulo">
-        <h1 class="titulo-principal">Conocé el estado del agua donde vivís</h1>
-        <form class="formulario-busqueda">
-            <div class="contenedor-busqueda">
-                <svg class="icono-busqueda" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.35-4.35"/>
-                </svg>
-                <input type="text" class="input-busqueda" placeholder="Buscá tu zona">
+       
+<div class="titulo-pagina">
+    <p id="texto-titulo"><strong>Conoce el estado del agua donde vivis</strong> </p><br>
+ 
+    <form id="search-form" method="get">
+        <fieldset>
+            <div class="search-box">
+                <img class="search-img" src="../img/lupa.png" alt="">
+                <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
             </div>
-        </form>
-    </section>
-
-    <section class="seccion-mapa">
-        <div class="contenedor-mapa">
-            <gmp-map
-                center="-32.8895,-68.8458"
-                zoom="10"
-                map-id="DEMO_MAP_ID"
-                style="height: 100%; width: 100%;">
-            </gmp-map>
-            
-            <div class="panel-info-mapa">
-                <div class="info-item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    <div>
-                        <span class="etiqueta-info">Ubicación:</span>
-                        <span class="valor-info">-</span>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                    <div>
-                        <span class="etiqueta-info">Última medición:</span>
-                        <span class="valor-info">-</span>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
-                    </svg>
-                    <div>
-                        <span class="etiqueta-info">Caudal:</span>
-                        <span class="valor-info">-</span>
-                    </div>
-                </div>
-            </div>
+        </fieldset>
+    </form>
+</div>
+ 
+ 
+<div class="contenedor-mapa">
+<gmp-map
+    center="-32.889458,-68.845839"
+    zoom="12"
+    map-id="DEMO_MAP_ID"
+    style="height: 400px; width: 100%;">
+</gmp-map>
+</div>
+ 
+<div class="filtros-container">
+ 
+    <div class="filtros-box">
+        <h3>Filtrar búsqueda</h3>
+ 
+    <div class="filtro-grupo">
+        <label class="check-item">
+            <input type="checkbox" checked>
+            Cortes programados
+        </label>
+ 
+        <label class="check-item">
+            <input type="checkbox">
+            Zonas con más reportes
+        </label>
+    </div>
+ 
+    <div class="filtro-grupo">
+        <label class="radio-item">
+            <input type="checkbox" checked>
+            Caudal actual
+        </label>
+ 
+        <label class="radio-item">
+            <input type="radio" name="caudal">
+            Poco caudal
+        </label>
+ 
+        <label class="radio-item">
+            <input type="radio" name="caudal">
+            Caudal normal
+        </label>
+ 
+        <label class="radio-item">
+            <input type="radio" name="caudal" checked>
+            Caudal alto
+        </label>
+    </div>
+    </div>
+ 
+    <div class="botones-laterales">
+        <button class="btn-reportar">
+            <img src="../img/reportar.png" class="icono-boton" alt="">
+            REPORTAR<br>PROBLEMA
+        </button>
+ 
+        <button class="btn-caudal">
+            <img src="../img/caudal.png" class="icono-boton" alt="">
+            CAUDAL
+        </button>
+    </div>
+ 
+    <div id="modal-reporte" class="modal-overlay">
+    <div class="modal-contenido">
+ 
+        <button class="modal-back" id="cerrarModal">
+            ⟵
+        </button>
+ 
+        <h2 class="modal-titulo">Reporte</h2>
+ 
+        <div class="seccion">
+            <h3>Caudal actual</h3>
+ 
+            <label class="opcion">
+                <input type="radio" name="caudal" value="bajo">
+                <span class="circulo bajo"></span>Poco caudal
+            </label>
+ 
+            <label class="opcion">
+                <input type="radio" name="caudal" value="normal">
+                <span class="circulo normal"></span>Caudal normal
+            </label>
+ 
+            <label class="opcion">
+                <input type="radio" name="caudal" value="alto">
+                <span class="circulo alto"></span>Caudal alto
+            </label>
         </div>
-    </section>
-
-    <section class="seccion-filtros">
-        <div class="contenedor-filtros">
-            <div class="panel-filtros">
-                <h3 class="titulo-filtros">Filtrar búsqueda</h3>
-                
-                <div class="grupo-filtros">
-                    <label class="filtro-opcion">
-                        <input type="checkbox" checked>
-                        <span>Cortes programados</span>
-                    </label>
-                    <label class="filtro-opcion">
-                        <input type="checkbox">
-                        <span>Zonas con más reportes</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="panel-filtros">
-                <div class="grupo-filtros">
-                    <label class="filtro-opcion">
-                        <input type="radio" name="caudal" checked>
-                        <span>Caudal actual</span>
-                    </label>
-                    <label class="filtro-opcion">
-                        <input type="radio" name="caudal">
-                        <span>Poco caudal</span>
-                    </label>
-                    <label class="filtro-opcion">
-                        <input type="radio" name="caudal">
-                        <span>Caudal normal</span>
-                    </label>
-                    <label class="filtro-opcion">
-                        <input type="radio" name="caudal">
-                        <span>Caudal alto</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="panel-botones">
-                <button class="btn-accion btn-reportar">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="12" y1="18" x2="12" y2="12"/>
-                        <line x1="9" y1="15" x2="15" y2="15"/>
-                    </svg>
-                    <span>REPORTAR<br>PROBLEMA</span>
-                </button>
-
-                <button class="btn-accion btn-caudal">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
-                    </svg>
-                    <span>CAUDAL</span>
-                </button>
-            </div>
+ 
+        <div class="seccion mapa-box">
+            <div id="modalMap" class="mapa"></div>
         </div>
-    </section>
-
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
-    </script>
-    <script src="/AquaNet/js/home.js"></script>
+ 
+        <div class="seccion">
+            <label>Selecciona tu zona:</label>
+            <select id="zonaSelect">
+                <option value="">-- Selecciona --</option>
+                <option>Mendoza centro</option>
+                <option>San Rafael</option>
+                <option>Tunuyan</option>
+            </select>
+        </div>
+ 
+        <div class="seccion">
+            <label>Motivo de tu reporte:</label>
+            <textarea id="motivo" rows="3"></textarea>
+        </div>
+ 
+        <p class="mensaje-login">Debes <a href="#">iniciar sesión</a> para hacer reportes</p>
+ 
+        <button class="btn-enviar" disabled>Enviar reporte</button>
+ 
+    </div>
+</div>
+ 
+</div>
+ 
+ 
 </body>
+ 
+ <!--
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap%22>
+  </script>-->
+  
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
+  </script>
+
+<script src="/AquaNet/js/home.js"></script>
+ 
+ 
 </html>

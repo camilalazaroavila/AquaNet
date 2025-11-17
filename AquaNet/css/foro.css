@@ -9,7 +9,10 @@ body {
     background: linear-gradient(180deg, #d4e3f7 0%, #e8f0fc 100%);
     min-height: 100vh;
 }
- 
+
+.espacio-carrusel {
+    height: 150px;
+}
 .encabezado {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);

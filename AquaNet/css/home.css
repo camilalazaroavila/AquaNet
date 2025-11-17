@@ -10,7 +10,9 @@ margin-top: 20px;
 .body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
- 
+ .espacio-carrusel {
+    height: 150px;
+}
 .search-box {
     position: relative;
     width: 300px;  

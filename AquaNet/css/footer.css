@@ -1,0 +1,40 @@
+.footer {
+    background: white;
+    padding: 2.5rem 2rem 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-col h4 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.footer-col p,
+.footer-col a {
+    color: #475569;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col a {
+    text-decoration: none;
+}
+
+
+.footer-copy {
+    margin-top: 2rem;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}

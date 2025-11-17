@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaNet - Foro</title>
     <link rel="stylesheet" href="/AquaNet/css/foroActualizado.css">
+    <link rel="stylesheet" href="/AquaNet/css/carousel.css">
+    <link rel="stylesheet" href="/AquaNet/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -211,4 +213,95 @@
     </main>
  
  
-    <!--aca iria el carrousel de Em-->>
+    <div class="carousel-flotante">
+<div class="contenedor-carousel">
+  <button class="nav-arrow izq" onclick="moveSlide(-1)">‹</button>
+
+  <div class="slides-viewport">
+    <div class="slides" id="slides">
+      
+      <div class="slide">
+        <div class="panel cortes">
+          <div class="panel-header">
+            <span class="title">Cortes programados</span>
+          </div>
+          <div class="panel-body">
+            <p><strong>Zona:</strong> Las Heras</p>
+            <p><strong>Horario:</strong> 13:00 a 15:00</p>
+            <p><strong>Motivo:</strong> Reparaciones</p>
+          </div>
+        </div>
+        <div class="panel consejos">
+          <div class="panel-header">
+            <span class="title">Consejos</span>
+          </div>
+          <div class="panel-body">
+            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="panel cortes">
+          <div class="panel-header">
+            <span class="title">Cortes programados</span>
+          </div>
+          <div class="panel-body">
+            <p><strong>Zona:</strong> Lavalle</p>
+            <p><strong>Horario:</strong> 09:00 a 11:00</p>
+            <p><strong>Motivo:</strong> Mantenimiento </p>
+          </div>
+        </div>
+
+        <div class="panel consejos">
+          <div class="panel-header">
+            <span class="title">Consejos</span>
+          </div>
+          <div class="panel-body">
+             <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="nav-arrow der" onclick="moveSlide(1)">›</button>
+</div>
+  </div>
+</div>
+</div>
+<footer class="footer">
+    <div class="footer-contenido">
+        <div class="footer-col">
+            <h4>AquaNet</h4>
+        </div>
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Voluntariados</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Foro</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>AquaNet@gmail.com</p>
+            <p>Mendoza, Argentina</p>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        © 2025 AquaNet — Todos los derechos reservados
+    </div>
+</footer>
+
+<div class="espacio-carrusel"></div>
+<script src="/AquaNet/js/carousel.js"></script>

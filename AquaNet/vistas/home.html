@@ -1,116 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/AquaNet/css/foro.css">
     <link rel="stylesheet" href="/AquaNet/css/home.css">
-    <title>Document</title>
+    <title>AquaNet - Home</title>
 </head>
 <body>
-
-    
-<header class="encabezado">
+    <header class="encabezado">
         <div class="contenedor">
-            <h1 class="logo">AquaNet</h1>
+            <button class="btn-menu">☰</button>
+            <a href="/AquaNet/vistas/home.html" class="logo">AquaNet</a>
             <nav class="navegacion">
-                <a href="#voluntariados">Voluntariados</a>
-                <a href="#foro" class="activo">Foro</a>
-                <a href="#donaciones">Donaciones</a>
+                <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
                 <a href="#nosotros">Nosotros</a>
+                <a href="/AquaNet/vistas/foroVista.html">Foro</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
-            <div class="menu-usuario">
+            <div class="usuario">
                 <span>Usuario</span>
-                <div class="icono-usuario"></div>
+                <div class="icono-usuario">👤</div>
             </div>
         </div>
     </header>
-        
-<div class="titulo-pagina">
-    <h2 id="texto-titulo"> Conoce el estado del agua donde vivis</h2>
 
-    <form id="search-form" method="get">
-        <fieldset>
-            <div class="search-box">
-                <img class="search-img" src="../img/lupa.png" alt="">
-                <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
+    <section class="seccion-titulo">
+        <h1 class="titulo-principal">Conocé el estado del agua donde vivís</h1>
+        <form class="formulario-busqueda">
+            <div class="contenedor-busqueda">
+                <svg class="icono-busqueda" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" class="input-busqueda" placeholder="Buscá tu zona">
             </div>
-        </fieldset>
-    </form>
-</div>
-<br>
+        </form>
+    </section>
 
-<div class="contenedor-mapa">
-<gmp-map
-    center="38.7946,-106.5348"
-    zoom="4"
-    map-id="DEMO_MAP_ID"
-    style="height: 400px; width: 100%;"></gmp-map>
-</div>
-
-<div class="filtros-container">
-
-    <div class="filtros-box">
-        <h3>Filtrar búsqueda</h3>
-
-        <div class="filtro-grupo">
-            <label class="check-item">
-                <input type="checkbox" checked>
-                Cortes programados
-            </label>
-
-            <label class="check-item">
-                <input type="checkbox">
-                Zonas con más reportes
-            </label>
+    <section class="seccion-mapa">
+        <div class="contenedor-mapa">
+            <gmp-map
+                center="-32.8895,-68.8458"
+                zoom="10"
+                map-id="DEMO_MAP_ID"
+                style="height: 100%; width: 100%;">
+            </gmp-map>
+            
+            <div class="panel-info-mapa">
+                <div class="info-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <div>
+                        <span class="etiqueta-info">Ubicación:</span>
+                        <span class="valor-info">-</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <div>
+                        <span class="etiqueta-info">Última medición:</span>
+                        <span class="valor-info">-</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                    </svg>
+                    <div>
+                        <span class="etiqueta-info">Caudal:</span>
+                        <span class="valor-info">-</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="filtro-grupo">
-            <label class="radio-item">
-                <input type="checkbox" checked>
-                Caudal actual
-            </label>
+    <section class="seccion-filtros">
+        <div class="contenedor-filtros">
+            <div class="panel-filtros">
+                <h3 class="titulo-filtros">Filtrar búsqueda</h3>
+                
+                <div class="grupo-filtros">
+                    <label class="filtro-opcion">
+                        <input type="checkbox" checked>
+                        <span>Cortes programados</span>
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox">
+                        <span>Zonas con más reportes</span>
+                    </label>
+                </div>
+            </div>
 
-            <label class="radio-item">
-                <input type="radio" name="caudal">
-                Poco caudal
-            </label>
+            <div class="panel-filtros">
+                <div class="grupo-filtros">
+                    <label class="filtro-opcion">
+                        <input type="radio" name="caudal" checked>
+                        <span>Caudal actual</span>
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="caudal">
+                        <span>Poco caudal</span>
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="caudal">
+                        <span>Caudal normal</span>
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="caudal">
+                        <span>Caudal alto</span>
+                    </label>
+                </div>
+            </div>
 
-            <label class="radio-item">
-                <input type="radio" name="caudal">
-                Caudal normal
-            </label>
+            <div class="panel-botones">
+                <button class="btn-accion btn-reportar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <line x1="9" y1="15" x2="15" y2="15"/>
+                    </svg>
+                    <span>REPORTAR<br>PROBLEMA</span>
+                </button>
 
-            <label class="radio-item">
-                <input type="radio" name="caudal" checked>
-                Caudal alto
-            </label>
+                <button class="btn-accion btn-caudal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                    </svg>
+                    <span>CAUDAL</span>
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="botones-laterales">
-        <button class="btn-reportar">
-            <img src="../img/reportar.png" class="icono-boton" alt="">
-            REPORTAR<br>PROBLEMA
-        </button>
-
-        <button class="btn-caudal">
-            <img src="../img/caudal.png" class="icono-boton" alt="">
-            CAUDAL
-        </button>
-    </div>
-
-</div>
-
-
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
+    </script>
+    <script src="/AquaNet/js/home.js"></script>
 </body>
-
-
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
-  </script>
-<script src="/AquaNet/js/home.js"></script>
-
-
 </html>

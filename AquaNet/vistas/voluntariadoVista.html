@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaNet - Voluntariados</title>
-    <link rel="stylesheet" href="/AquaNet/css/voluntariado.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaNet - Voluntariados</title>
+<link rel="stylesheet" href="/AquaNet/css/voluntariado.css">
 </head>
 <body>
-    <header class="encabezado">
-        <div class="contenedor">
-            <h1 class="logo">AquaNet</h1>
-            <nav class="navegacion">
-                <a href="#voluntariados" class="activo">Voluntariados</a>
-                <a href="foro.html">Foro</a>
-                <a href="#donaciones">Donaciones</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#ayuda">Ayuda</a>
-            </nav>
-            <div class="menu-usuario">
-                <span>Usuario</span>
-                <div class="icono-usuario"></div>
-            </div>
-        </div>
-    </header>
-
+<header class="encabezado">
+<div class="contenedor-header">
+<button class="btn-menu">☰</button>
+<h1 class="logo">AquaNet</h1>
+<nav class="navegacion">
+<a href="#voluntariados" class="activo">Voluntariados</a>
+<a href="#nosotros">Nosotros</a>
+<a href="/AquaNet/vistas/foroVista.html">Foro</a>
+<a href="#ayuda">Ayuda</a>
+</nav>
+<div class="usuario">
+<span>Usuario</span>
+<div class="icono-usuario">👤</div>
+</div>
+</div>
+</header>
+ 
     <main class="contenido-principal">
-        <div class="contenedor-fluido">
-            <a href="#" class="enlace-volver">< Volver</a>
-
-            <div class="grilla-voluntariados">
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-cercanos"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Voluntariados cerca de mí</h2>
-                        <p>Filtrá por zona y encontrá oportunidades cerca tuyo.</p>
-                        <a href="#cercanos" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-limpieza"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Limpieza ambiental</h2>
-                        <p>Participá en jornadas de limpieza de ríos, lagunas o playas.</p>
-                        <a href="#limpieza" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-educacion"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Educación y concientización</h2>
-                        <p>Ayudá a difundir buenas prácticas de cuidado del agua en tu comunidad.</p>
-                        <a href="#educacion" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-monitoreo"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Monitoreo del agua</h2>
-                        <p>Medí niveles, analizá calidad del agua y reportá cambios en tu zona.</p>
-                        <a href="detalle-monitoreo.html" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-apoyo"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Apoyo comunitario</h2>
-                        <p>Brindá asistencia a comunidades con problemas de acceso al agua.</p>
-                        <a href="#apoyo" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="tarjeta-voluntariado">
-                    <div class="imagen-tarjeta imagen-tecnologia"></div>
-                    <div class="contenido-tarjeta">
-                        <h2>Tecnología y datos</h2>
-                        <p>Desarrollá herramientas, mapas o análisis para mejorar la gestión del agua.</p>
-                        <a href="#tecnologia" class="boton-ver-mas">Ver más</a>
-                    </div>
-                </article>
-            </div>
+<div class="grid-voluntariados">
+<article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/voluntariados-cerca.jpg" alt="Voluntariados cerca de mí" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Voluntariados cerca de mí</h2>
+<p class="descripcion-tarjeta">Filtrá por zona y encontrá oportunidades cerca tuyo.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
+            <article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/limpieza-ambiental.jpg" alt="Limpieza ambiental" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Limpieza ambiental</h2>
+<p class="descripcion-tarjeta">Participá en jornadas de limpieza de ríos, lagunas o playas.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
+            <article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/educacion.jpg" alt="Educación y concientización" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Educación y concientización</h2>
+<p class="descripcion-tarjeta">Ayudá a difundir buenas prácticas de cuidado del agua en tu comunidad.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
+            <article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/monitoreo-agua.jpg" alt="Monitoreo del agua" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Monitoreo del agua</h2>
+<p class="descripcion-tarjeta">Medí niveles, analizá calidad del agua y reportá cambios en tu zona.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
+            <article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/apoyo-comunitario.jpg" alt="Apoyo comunitario" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Apoyo comunitario</h2>
+<p class="descripcion-tarjeta">Brindá asistencia a comunidades con problemas de acceso al agua.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
+            <article class="tarjeta-voluntariado">
+<img src="/AquaNet/img/tecnologia-datos.jpg" alt="Tecnología y datos" class="imagen-fondo">
+<div class="overlay"></div>
+<div class="contenido-tarjeta">
+<h2 class="titulo-tarjeta">Tecnología y datos</h2>
+<p class="descripcion-tarjeta">Desarrollá herramientas, mapas o análisis para mejorar la gestión del agua.</p>
+<a href="#" class="btn-ver-mas">Ver más</a>
+</div>
+</article>
+ 
         </div>
-    </main>
+</main>
+ 
+    <script src="/AquaNet/js/voluntariados.js"></script>
 </body>
 </html>

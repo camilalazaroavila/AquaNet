@@ -8,136 +8,203 @@
 </head>
 <body>
     <header class="encabezado">
-        <div class="contenedor">
+        <div class="contenedor-header">
+            <button class="btn-menu">☰</button>
             <h1 class="logo">AquaNet</h1>
             <nav class="navegacion">
-                <a href="#voluntariados">Voluntariados</a>
-                <a href="#foro" class="activo">Foro</a>
-                <a href="#donaciones">Donaciones</a>
+                <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
                 <a href="#nosotros">Nosotros</a>
+                <a href="#foro" class="activo">Foro</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
-            <div class="menu-usuario">
+            <div class="usuario">
                 <span>Usuario</span>
-                <div class="icono-usuario"></div>
+                <div class="icono-usuario">👤</div>
             </div>
         </div>
     </header>
 
     <main class="contenido-principal">
-        <div class="contenedor-fluid">
-            <a href="#" class="enlace-volver">< Volver</a>
+        <a href="#" class="btn-volver">← Volver</a>
 
-            <div class="envoltorio-contenido">
-                <aside class="barra-lateral">
-                    <h2 class="titulo-barra">Foro</h2>
-                    <!-- hay q ponerle imagens de conosi-->
-                    <div class="seccion-filtro">
-                        <div class="encabezado-filtro">
-                            <span class="icono-filtro"></span> 
-                            <span>Filtrar por</span>
-                        </div>
-
-                        <div class="grupo-filtro">
-                            <button class="boton-filtro" onclick="alternarFiltro('zona')">
-                                <span>Zona</span>
-                                <span class="flecha">▼</span>
-                            </button>
-                            <div id="zona" class="opciones-filtro activo">
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="lavalle">
-                                    <span>Lavalle</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="general-alvear">
-                                    <span>General Alvear</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="ciudad-mendoza">
-                                    <span>Ciudad de Mendoza</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="godoy-cruz">
-                                    <span>Godoy Cruz</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="guaymallen">
-                                    <span>Guaymallén</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="las-heras">
-                                    <span>Las Heras</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="lujan-cuyo">
-                                    <span>Luján de Cuyo</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="maipu">
-                                    <span>Maipú</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="tunuyan">
-                                    <span>Tunuyán</span>
-                                </label>
-                                <label class="opcion-filtro">
-                                    <input type="checkbox" name="zona" value="san-carlos">
-                                    <span>San Carlos</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="grupo-filtro">
-                            <button class="boton-filtro" onclick="alternarFiltro('problema')">
-                                <span>Problema</span>
-                                <span class="flecha">▼</span>
-                            </button>
-                            <div id="problema" class="opciones-filtro">
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <section class="seccion-foro">
-                    <div class="barra-busqueda">
-                        <input type="text" placeholder="Buscar..." class="campo-busqueda">
+        <div class="contenedor-foro">
+            <aside class="barra-lateral">
+                <h2 class="titulo-foro">Foro</h2>
+                
+                <div class="seccion-filtros">
+                    <div class="encabezado-filtro">
+                        <img src="/AquaNet/img/filter.svg" alt="Filtrar">
+                        <span>Filtrar por</span>
                     </div>
 
-                    <div class="encabezado-foro">
-                        <h3>Últimas publicaciones</h3>
-                        <div class="estadisticas-foro">
-                            <span>Vistos</span>
-                            <span>Comentarios</span>
-                        </div>
+                    <div class="grupo-filtro">
+                        <label for="filtro-zona">Zona</label>
+                        <select id="filtro-zona" class="selector-filtro">
+                            <option value="">Todas</option>
+                            <option value="lavalle">Lavalle</option>
+                            <option value="general-alvear">General Alvear</option>
+                            <option value="ciudad-mendoza">Ciudad de Mendoza</option>
+                            <option value="godoy-cruz">Godoy Cruz</option>
+                            <option value="guaymallen">Guaymallén</option>
+                            <option value="las-heras">Las Heras</option>
+                            <option value="lujan-cuyo">Luján de Cuyo</option>
+                            <option value="maipu">Maipú</option>
+                            <option value="tunuyan">Tunuyán</option>
+                            <option value="san-carlos">San Carlos</option>
+                        </select>
                     </div>
 
-                    <article class="publicacion-foro">
-                        <div class="encabezado-publicacion">
-                            <div class="avatar-usuario"></div>
-                            <span class="nombre-usuario">Tiara Martinez</span>
-                        </div>
+                    <div class="grupo-filtro">
+                        <label for="filtro-problema">Problema</label>
+                        <select id="filtro-problema" class="selector-filtro">
+                            <option value="">Todos</option>
+                            <option value="corte-agua">Corte de agua</option>
+                            <option value="baja-presion">Baja presión</option>
+                            <option value="turbidez">Turbidez</option>
+                            <option value="mantenimiento">Mantenimiento</option>
+                            <option value="reparaciones">Reparaciones</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="area-publicaciones">
+                <!-- agregar foto icono -->
+                <button class="btn-agregar-publicacion">
+                    <img src="/AquaNet/img/edit-solid.svg" alt="">
+                </button>
+
+                <div class="barra-superior">
+                    <div class="pestanas">
+                        <button class="pestana activa">Últimas publicaciones</button>
+                        <button class="pestana">Vistos</button>
+                        <button class="pestana">Comentarios</button>
+                    </div>
+                    <div class="busqueda">
+                        <input type="text" placeholder="Buscar..." class="input-busqueda">
+                        <img src="/AquaNet/img/search.svg" alt="Buscar">
+                    </div>
+                </div>
+
+                <div class="lista-publicaciones">
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
                         <div class="contenido-publicacion">
-                            <h4 class="titulo-publicacion">Corte de agua en Las Heras</h4>
-                            <span class="tiempo-publicacion">Hace 2 horas</span>
+                            <p class="nombre-usuario">Nara Martínez</p>
+                            <h3 class="titulo-publicacion">Corte de agua en Las Heras</h3>
+                            <p class="tiempo">Hace 5 min</p>
                         </div>
-                        <div class="estadisticas-publicacion">
-                            <div class="dato">
-                                <span class="numero-dato">58</span>
-                                <span class="icono-dato">👁</span>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">23</span>
+                                <span class="icono">👁</span>
                             </div>
-                            <div class="dato">
-                                <span class="numero-dato">123</span>
+                            <div class="stat">
+                                <span class="numero">12</span>
                             </div>
-                            <button class="boton-compartir">🔗</button>
                         </div>
+                        <button class="btn-compartir">🔗</button>
                     </article>
 
-                    <button class="boton-publicar">PUBLICAR</button>
-                </section>
-            </div>
+                    <!-- poner iconos en vez d emojis -->
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
+                        <div class="contenido-publicacion">
+                            <p class="nombre-usuario">Juan Pérez</p>
+                            <h3 class="titulo-publicacion">Baja presión en Maipú ¿a alg...</h3>
+                            <p class="tiempo">Hace 28 min</p>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">98</span>
+                                <span class="icono">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="numero">22</span>
+                            </div>
+                        </div>
+                        <button class="btn-compartir">🔗</button>
+                    </article>
+
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
+                        <div class="contenido-publicacion">
+                            <p class="nombre-usuario">Sonia Gallardo</p>
+                            <h3 class="titulo-publicacion">Problemas con la turbidez d...</h3>
+                            <p class="tiempo">Hace 1 hora</p>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">58</span>
+                                <span class="icono">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="numero">15</span>
+                            </div>
+                        </div>
+                        <button class="btn-compartir">🔗</button>
+                    </article>
+
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
+                        <div class="contenido-publicacion">
+                            <p class="nombre-usuario">Franco Rodríguez</p>
+                            <h3 class="titulo-publicacion">Corte de agua programado...</h3>
+                            <p class="tiempo">Hace 2 horas</p>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">121</span>
+                                <span class="icono">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="numero">82</span>
+                            </div>
+                        </div>
+                        <button class="btn-compartir">🔗</button>
+                    </article>
+
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
+                        <div class="contenido-publicacion">
+                            <p class="nombre-usuario">Nara Martínez</p>
+                            <h3 class="titulo-publicacion">Aviso: interrupción por mant...</h3>
+                            <p class="tiempo">Hace 8 horas</p>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">386</span>
+                                <span class="icono">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="numero">117</span>
+                            </div>
+                        </div>
+                        <button class="btn-compartir">🔗</button>
+                    </article>
+
+                    <article class="publicacion">
+                        <div class="avatar-usuario">👤</div>
+                        <div class="contenido-publicacion">
+                            <p class="nombre-usuario">Beatriz Sosa</p>
+                            <h3 class="titulo-publicacion">Consulta sobre calidad...</h3>
+                            <p class="tiempo">Hace 12 horas</p>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="stat">
+                                <span class="numero">45</span>
+                                <span class="icono">👁</span>
+                            </div>
+                            <div class="stat">
+                                <span class="numero">8</span>
+                            </div>
+                        </div>
+                        <button class="btn-compartir">🔗</button>
+                    </article>
+                </div>
+            </section>
         </div>
     </main>
 
-    <script src="/AquaNet/js/foro.js"></script>
-</body>
-</html>
+
+    <!--aca iria el carrousel de Em-->>

@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaNet - Foro</title>
+    <link rel="stylesheet" href="/AquaNet/css/foro.css">
     <link rel="stylesheet" href="/AquaNet/css/foroActualizado.css">
     <link rel="stylesheet" href="/AquaNet/css/carousel.css">
     <link rel="stylesheet" href="/AquaNet/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
 </head>
 <body>
     <header class="encabezado">
-        <div class="contenedor-header">
-            <button class="btn-menu">☰</button>
-            <h1 class="logo">AquaNet</h1>
-            <nav class="navegacion">
-                <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#foro" class="activo">Foro</a>
-                <a href="#ayuda">Ayuda</a>
-            </nav>
-            <div class="usuario">
-                <span>Usuario</span>
-                <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
-            </div>
-        </div>
-    </header>
+    <div class="contenedor">
+      <h1 class="logo">
+        ☰<a href="/AquaNet/vistas/home.html" class="return-home"><span class="aqua">Aqua</span><span
+            class="net">Net</span></a>
+      </h1>
+      <nav class="navegacion">
+        <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
+        <a href="/AquaNet/vistas/foroVista.html" class="activo">Foro</a>
+        <a href="#donaciones">Donaciones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ayuda">Ayuda</a>
+      </nav>
+      <div class="usuario">
+        <span>Usuario</span>
+        <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
+      </div>
+    </div>
+  </header>
  
     <main class="contenido-principal">
         <a href="/AquaNet/vistas/home.html" class="btn-volver">← Volver</a>
@@ -81,8 +88,8 @@
                 <div class="barra-superior">
                     <div class="pestanas">
                         <button class="pestana activa">Últimas publicaciones</button>
-                        <button class="pestana">Vistos</button>
-                        <button class="pestana">Comentarios</button>
+                        <!--<button class="pestana">Vistos</button>
+                        <button class="pestana">Comentarios</button> -->
                     </div>
                     <div class="busqueda">
                         <input type="text" placeholder="Buscar..." class="input-busqueda">

@@ -11,11 +11,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    justify-items: center;
+}
+
+.footer-col {
+    text-align: center;
 }
 
 .footer-col h4 {
-    color: #1e293b;
+    color: #365381;
     margin-bottom: 1rem;
+    font-family: 'Fascinate';
+    letter-spacing: 2px;
 }
 
 .footer-col p,

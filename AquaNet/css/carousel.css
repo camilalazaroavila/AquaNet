@@ -37,6 +37,7 @@
 .panel-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 8px;
   color: white;
@@ -45,7 +46,7 @@
 }
 
 .cortes .panel-header { background: #63a9e6; }
-.consejos .panel-header { background: #8fc4ff; }
+.consejos .panel-header { background: #8cbbf1; }
 
 .panel-body p {
   margin: 6px 0;
@@ -70,7 +71,9 @@
   font-size: 20px;
   color: #163e63;
   z-index: 5;
+  margin-top: 20px;
 }
+
 .izq { left: 8px; }
 .der { right: 8px; }
 

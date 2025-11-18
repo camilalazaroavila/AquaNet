@@ -1,26 +1,30 @@
-.titulo-pagina{
+.titulo-pagina {
     text-align: center;
 }
- 
-#texto-titulo{
-font-size: 22px;
-margin-top: 20px;
+
+#texto-titulo {
+    font-size: 22px;
+    margin-top: 20px;
 }
- 
-.body{
+
+.body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
- .espacio-carrusel {
+
+.espacio-carrusel {
     height: 150px;
 }
+
 .search-box {
     position: relative;
-    width: 300px;  
+    width: 300px;
     margin: 0 auto;
 }
+
 fieldset {
     border: none;
 }
+
 .search-img {
     position: absolute;
     top: 50%;
@@ -30,9 +34,9 @@ fieldset {
     height: 18px;
     pointer-events: none;
 }
- 
+
 #search-input {
-    width: 100%;  
+    width: 100%;
     padding: 10px 14px 10px 40px;
     font-size: 15px;
     border: 1px solid #ddd;
@@ -41,29 +45,27 @@ fieldset {
     background-color: #f9faff;
     color: #333;
 }
- 
- 
-.contenedor-mapa{
-    width: 90%;                
-    max-width: 1200px;          
-    margin: 20px auto;          
-    border: 2px solid #000000;  
-    border-radius: 10px;      
+
+
+.contenedor-mapa {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 2px solid #000000;
+    border-radius: 10px;
     background: white;
 }
- 
-/* Contenedor general */
+
 .filtros-container {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     margin: 20px auto;
     width: 95%;
     max-width: 1200px;
 }
- 
-/* Caja blanca de filtros */
+
 .filtros-box {
     background: #ffffff;
     padding: 20px 25px;
@@ -71,44 +73,43 @@ fieldset {
     border-radius: 12px;
     border: 2px solid #d4e0f7;
     font-family: inherit;
+    display: flex;
+    justify-content: space-between;
 }
- 
+
 .filtros-box h3 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #333;
     font-weight: 600;
 }
- 
-/* Grupos */
+
 .filtro-grupo {
     margin-bottom: 15px;
 }
- 
-/* Estilo de checkboxes */
-.check-item, .radio-item {
+
+.check-item,
+.radio-item {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    gap: 8px;
+    gap: 10px;
     font-size: 15px;
     color: #333;
 }
- 
+
 .check-item input,
 .radio-item input {
     width: 18px;
     height: 18px;
 }
- 
-/* Contenedor de botones */
+
 .botones-laterales {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    gap: 50px;
 }
- 
-/* Botón Reportar Problema */
+
 .btn-reportar {
     background-color: #ff8bb1;
     color: white;
@@ -126,8 +127,11 @@ fieldset {
     align-items: center;
     gap: 8px;
 }
- 
-/* Botón Caudal */
+
+.btn-reportar:hover {
+    box-shadow: 0 8px 20px rgb(165, 104, 137);
+}
+
 .btn-caudal {
     height: 55px;
     background-color: #79c8ff;
@@ -144,41 +148,65 @@ fieldset {
     align-items: center;
     gap: 8px;
 }
- 
+
+.btn-caudal:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
+}
+
 .icono-boton {
     width: 22px;
     height: 22px;
 }
- 
- 
-/*  modal */
+
+.btn-sesion {
+    background-color: #79c8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sesion:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
+}
+
+.regis:hover {
+    text-shadow: 0px 0px 10px rgb(104, 158, 187);
+    cursor: pointer;
+}
+
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 2000;
 }
- 
-/* --- Contenedor modal --- */
+
 .modal-contenido {
     width: 450px;
     background: #eef1fb;
     border-radius: 18px;
     padding: 25px;
     position: relative;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
- 
+
 .modal-titulo {
     text-align: center;
     margin-bottom: 20px;
     font-size: 22px;
     font-weight: bold;
 }
- 
+
 .modal-back {
     position: absolute;
     top: 18px;
@@ -188,24 +216,22 @@ fieldset {
     font-size: 22px;
     cursor: pointer;
 }
- 
-/* --- Secciones --- */
-.seccion {
-    margin-bottom: 18px;
+
+.modal-back:hover {
+    color: #516492;
 }
- 
-/* --- Opciones de caudal --- */
+
 .opcion {
     display: flex;
     align-items: center;
     margin: 6px 0;
     cursor: pointer;
 }
- 
+
 .opcion input {
     display: none;
 }
- 
+
 .circulo {
     width: 20px;
     height: 20px;
@@ -213,17 +239,27 @@ fieldset {
     margin-right: 10px;
     border: 2px solid #333;
 }
- 
-.bajo { border-color: #444; }
-.normal { background: #78a7ff; border: none; }
-.alto { background: #0c2d7a; border: none; }
- 
- 
+
+.bajo {
+    border-color: #444;
+}
+
+.normal {
+    background: #78a7ff;
+    border: none;
+}
+
+.alto {
+    background: #0c2d7a;
+    border: none;
+}
+
+
 .mapa-box {
     display: flex;
     justify-content: center;
 }
- 
+
 .mapa {
     width: 250px;
     height: 180px;
@@ -234,28 +270,34 @@ fieldset {
     align-items: center;
     font-weight: bold;
 }
- 
- 
-select, textarea {
+
+
+select,
+textarea {
     width: 100%;
     border-radius: 10px;
     border: 1px solid #bbb;
     padding: 8px;
 }
- 
- 
+
+
 .mensaje-login {
+    margin-bottom: 30px;
     text-align: center;
     color: red;
     font-size: 14px;
 }
- 
+
 .mensaje-login a {
     color: red;
-    text-decoration: underline;
+    border-bottom-color: red;
 }
- 
- 
+
+.mensaje-login a:hover {
+    color: rgb(156, 99, 109);
+    
+}
+
 .btn-enviar {
     width: 100%;
     padding: 10px;
@@ -266,132 +308,128 @@ select, textarea {
     border-radius: 12px;
     cursor: not-allowed;
 }
+
 #modalMap {
     width: 250px;
     height: 180px;
     border-radius: 10px;
 }
- 
+
 @media (max-width: 992px) {
- 
-    /* Header */
+
     .encabezado .contenedor {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
- 
+
     .navegacion {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px;
     }
- 
-    .menu-usuario {
-        justify-content: center;
-    }
- 
-    /* Filtros + mapa + botones */
+
+
     .filtros-container {
         flex-direction: column;
         align-items: center;
     }
- 
+
     .filtros-box {
         width: 90%;
     }
- 
+
     .botones-laterales {
         flex-direction: row;
         justify-content: center;
         width: 100%;
         gap: 20px;
     }
- 
+
     .btn-reportar,
     .btn-caudal {
         width: 45%;
     }
 }
- 
+
 @media (max-width: 600px) {
- 
+
     #texto-titulo {
         font-size: 18px;
         padding: 0 10px;
     }
- 
+
     .search-box {
         width: 90%;
     }
- 
+
     .contenedor-mapa {
         width: 95%;
         height: auto;
     }
- 
+
     .filtros-box {
         width: 100%;
         padding: 15px;
     }
- 
+
     .botones-laterales {
         flex-direction: column;
         width: 100%;
         align-items: center;
     }
- 
+
     .btn-reportar,
     .btn-caudal {
         width: 90%;
     }
- 
+
     .modal-contenido {
         width: 90%;
         padding: 18px;
         border-radius: 14px;
     }
- 
+
     .modal-titulo {
         font-size: 19px;
     }
- 
+
     .modal-back {
         top: 12px;
         left: 12px;
         font-size: 20px;
     }
- 
+
     #modalMap {
         width: 100%;
         height: 150px;
     }
- 
+
     textarea {
         height: 80px;
     }
- 
+
     .btn-enviar {
         font-size: 15px;
         padding: 12px;
     }
 }
- 
- 
+
+
 @media (max-width: 400px) {
- 
+
     .btn-reportar,
     .btn-caudal {
         width: 100%;
         font-size: 14px;
     }
- 
+
     .icono-boton {
         width: 18px;
         height: 18px;
     }
- 
+
     #modalMap {
         height: 130px;
     }

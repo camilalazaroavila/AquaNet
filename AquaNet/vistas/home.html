@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,266 +8,260 @@
     <link rel="stylesheet" href="/AquaNet/css/home.css">
     <link rel="stylesheet" href="/AquaNet/css/carousel.css">
     <link rel="stylesheet" href="/AquaNet/css/footer.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
- 
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
+    <title>Home</title>
 </head>
+
 <body>
- 
-   
-<header class="encabezado">
+
+
+    <header class="encabezado">
         <div class="contenedor">
-            <h1 class="logo">AquaNet</h1>
+            <h1 class="logo">
+                ☰<span class="aqua">Aqua</span><span class="net">Net</span>
+            </h1>
             <nav class="navegacion">
-                <a href="#voluntariados">Voluntariados</a>
+                <a href="/AquaNet/vistas/voluntariadoVista.html">Voluntariados</a>
                 <a href="/AquaNet/vistas/foroVista.html">Foro</a>
                 <a href="#donaciones">Donaciones</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
             <div class="menu-usuario">
-                <span>Usuario</span>
-                <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
- 
+                <button class="btn-sesion">Iniciar Sesión</button>
+                <span class="regis">Registrarse</span>
             </div>
         </div>
     </header>
-       
-<div class="titulo-pagina">
-    <p id="texto-titulo"><strong>Conoce el estado del agua donde vivis</strong> </p><br>
- 
-    <form id="search-form" method="get">
-        <fieldset>
-            <div class="search-box">
-                <img class="search-img" src="../img/lupa.png" alt="">
-                <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
+
+    <div class="titulo-pagina">
+        <p id="texto-titulo"><strong>Conoce el estado del agua donde vivis</strong> </p><br>
+
+        <form id="search-form" method="get">
+            <fieldset>
+                <div class="search-box">
+                    <img class="search-img" src="../img/lupa.png" alt="">
+                    <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div class="contenedor-mapa">
+        <gmp-map center="-32.889458,-68.845839" zoom="12" map-id="DEMO_MAP_ID" style="height: 400px; width: 100%;">
+        </gmp-map>
+    </div>
+
+    <div class="filtros-container">
+
+        <div class="filtros-box">
+            <h3>Filtrar búsqueda</h3>
+
+            <div class="filtro-grupo">
+                <label class="check-item">
+                    <input type="checkbox" checked>
+                    Cortes programados
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    Zonas con más reportes
+                </label>
             </div>
-        </fieldset>
-    </form>
-</div>
- 
- 
-<div class="contenedor-mapa">
-<gmp-map
-    center="-32.889458,-68.845839"
-    zoom="12"
-    map-id="DEMO_MAP_ID"
-    style="height: 400px; width: 100%;">
-</gmp-map>
-</div>
- 
-<div class="filtros-container">
- 
-    <div class="filtros-box">
-        <h3>Filtrar búsqueda</h3>
- 
-    <div class="filtro-grupo">
-        <label class="check-item">
-            <input type="checkbox" checked>
-            Cortes programados
-        </label>
- 
-        <label class="check-item">
-            <input type="checkbox">
-            Zonas con más reportes
-        </label>
-    </div>
- 
-    <div class="filtro-grupo">
-        <label class="radio-item">
-            <input type="checkbox" checked>
-            Caudal actual
-        </label>
- 
-        <label class="radio-item">
-            <input type="radio" name="caudal">
-            Poco caudal
-        </label>
- 
-        <label class="radio-item">
-            <input type="radio" name="caudal">
-            Caudal normal
-        </label>
- 
-        <label class="radio-item">
-            <input type="radio" name="caudal" checked>
-            Caudal alto
-        </label>
-    </div>
-    </div>
- 
-    <div class="botones-laterales">
-        <button class="btn-reportar">
-            <img src="../img/reportar.png" class="icono-boton" alt="">
-            REPORTAR<br>PROBLEMA
-        </button>
- 
-        <button class="btn-caudal">
-            <img src="../img/caudal.png" class="icono-boton" alt="">
-            CAUDAL
-        </button>
-    </div>
- 
-    <div id="modal-reporte" class="modal-overlay">
-    <div class="modal-contenido">
- 
-        <button class="modal-back" id="cerrarModal">
-            ⟵
-        </button>
- 
-        <h2 class="modal-titulo">Reporte</h2>
- 
-        <div class="seccion">
-            <h3>Caudal actual</h3>
- 
-            <label class="opcion">
-                <input type="radio" name="caudal" value="bajo">
-                <span class="circulo bajo"></span>Poco caudal
-            </label>
- 
-            <label class="opcion">
-                <input type="radio" name="caudal" value="normal">
-                <span class="circulo normal"></span>Caudal normal
-            </label>
- 
-            <label class="opcion">
-                <input type="radio" name="caudal" value="alto">
-                <span class="circulo alto"></span>Caudal alto
-            </label>
-        </div>
- 
-        <div class="seccion mapa-box">
-            <div id="modalMap" class="mapa"></div>
-        </div>
- 
-        <div class="seccion">
-            <label>Selecciona tu zona:</label>
-            <select id="zonaSelect">
-                <option value="">-- Selecciona --</option>
-                <option>Mendoza centro</option>
-                <option>San Rafael</option>
-                <option>Tunuyan</option>
-            </select>
-        </div>
- 
-        <div class="seccion">
-            <label>Motivo de tu reporte:</label>
-            <textarea id="motivo" rows="3"></textarea>
-        </div>
- 
-        <p class="mensaje-login">Debes <a href="#">iniciar sesión</a> para hacer reportes</p>
- 
-        <button class="btn-enviar" disabled>Enviar reporte</button>
- 
-    </div>
-</div>
- 
-</div>
- 
- <div class="carousel-flotante">
-<div class="contenedor-carousel">
-  <button class="nav-arrow izq" onclick="moveSlide(-1)">‹</button>
 
-  <div class="slides-viewport">
-    <div class="slides" id="slides">
-      
-      <div class="slide">
-        <div class="panel cortes">
-          <div class="panel-header">
-            <span class="title">Cortes programados</span>
-          </div>
-          <div class="panel-body">
-            <p><strong>Zona:</strong> Las Heras</p>
-            <p><strong>Horario:</strong> 13:00 a 15:00</p>
-            <p><strong>Motivo:</strong> Reparaciones</p>
-          </div>
-        </div>
-        <div class="panel consejos">
-          <div class="panel-header">
-            <span class="title">Consejos</span>
-          </div>
-          <div class="panel-body">
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-          </div>
-        </div>
-      </div>
+            <div class="filtro-grupo">
+                <label class="radio-item">
+                    <input type="checkbox" checked>
+                    Caudal actual
+                </label>
 
-      <div class="slide">
-        <div class="panel cortes">
-          <div class="panel-header">
-            <span class="title">Cortes programados</span>
-          </div>
-          <div class="panel-body">
-            <p><strong>Zona:</strong> Lavalle</p>
-            <p><strong>Horario:</strong> 09:00 a 11:00</p>
-            <p><strong>Motivo:</strong> Mantenimiento </p>
-          </div>
+                <label class="radio-item">
+                    <input type="radio" name="caudal">
+                    Poco caudal
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="caudal">
+                    Caudal normal
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="caudal" checked>
+                    Caudal alto
+                </label>
+            </div>
         </div>
 
-        <div class="panel consejos">
-          <div class="panel-header">
-            <span class="title">Consejos</span>
-          </div>
-          <div class="panel-body">
-             <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-          </div>
+        <div class="botones-laterales">
+            <button class="btn-reportar">
+                <img src="../img/reportar.png" class="icono-boton" alt="">
+                REPORTAR<br>PROBLEMA
+            </button>
+
+            <button class="btn-caudal">
+                <img src="../img/caudal.png" class="icono-boton" alt="">
+                CAUDAL
+            </button>
         </div>
-      </div>
+
+        <div id="modal-reporte" class="modal-overlay">
+            <div class="modal-contenido">
+
+                <button class="modal-back" id="cerrarModal">
+                    ⟵
+                </button>
+
+                <h2 class="modal-titulo">Reporte</h2>
+
+                <div class="seccion">
+                    <h3>Caudal actual</h3>
+
+                    <label class="opcion">
+                        <input type="radio" name="caudal" value="bajo">
+                        <span class="circulo bajo"></span>Poco caudal
+                    </label>
+
+                    <label class="opcion">
+                        <input type="radio" name="caudal" value="normal">
+                        <span class="circulo normal"></span>Caudal normal
+                    </label>
+
+                    <label class="opcion">
+                        <input type="radio" name="caudal" value="alto">
+                        <span class="circulo alto"></span>Caudal alto
+                    </label>
+                </div>
+
+                <div class="seccion mapa-box">
+                    <div id="modalMap" class="mapa"></div>
+                </div>
+
+                <div class="seccion">
+                    <label>Selecciona tu zona:</label>
+                    <select id="zonaSelect" name="zonaSelect">
+                        <option value="">-- Selecciona --</option>
+                        <option>Mendoza centro</option>
+                        <option>San Rafael</option>
+                        <option>Tunuyan</option>
+                    </select>
+                </div>
+
+                <div class="seccion">
+                    <label>Motivo de tu reporte:</label>
+                    <textarea id="motivo" rows="3"></textarea>
+                </div>
+
+                <p class="mensaje-login">Debes <a href="/AquaNet/vistas/home.html">iniciar sesión</a> para hacer reportes</p>
+
+                <button class="btn-enviar" disabled>Enviar reporte</button>
+
+            </div>
+        </div>
 
     </div>
-  </div>
 
-  <button class="nav-arrow der" onclick="moveSlide(1)">›</button>
-</div>
-  </div>
-</div>
-</div>
-<footer class="footer">
-    <div class="footer-contenido">
-        <div class="footer-col">
-            <h4>AquaNet</h4>
-        </div>
-        <div class="footer-col">
-            <h4>Navegación</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Voluntariados</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Foro</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </div>
+    <div class="carousel-flotante">
+        <div class="contenedor-carousel">
+            <button class="nav-arrow izq" onclick="moveSlide(-1)">‹</button>
 
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p>AquaNet@gmail.com</p>
-            <p>Mendoza, Argentina</p>
+            <div class="slides-viewport">
+                <div class="slides" id="slides">
+
+                    <div class="slide">
+                        <div class="panel cortes">
+                            <div class="panel-header">
+                                <span class="title">Cortes programados</span>
+                            </div>
+                            <div class="panel-body">
+                                <p><strong>Zona:</strong> Las Heras</p>
+                                <p><strong>Horario:</strong> 13:00 a 15:00</p>
+                                <p><strong>Motivo:</strong> Reparaciones</p>
+                            </div>
+                        </div>
+                        <div class="panel consejos">
+                            <div class="panel-header">
+                                <span class="title">Consejos</span>
+                            </div>
+                            <div class="panel-body">
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="panel cortes">
+                            <div class="panel-header">
+                                <span class="title">Cortes programados</span>
+                            </div>
+                            <div class="panel-body">
+                                <p><strong>Zona:</strong> Lavalle</p>
+                                <p><strong>Horario:</strong> 09:00 a 11:00</p>
+                                <p><strong>Motivo:</strong> Mantenimiento </p>
+                            </div>
+                        </div>
+
+                        <div class="panel consejos">
+                            <div class="panel-header">
+                                <span class="title">Consejos</span>
+                            </div>
+                            <div class="panel-body">
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="nav-arrow der" onclick="moveSlide(1)">›</button>
         </div>
     </div>
-
-    <div class="footer-copy">
-        © 2025 AquaNet — Todos los derechos reservados
     </div>
-</footer>
+    </div>
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h4>AquaNet</h4>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Voluntariados</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Foro</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
 
-<div class="espacio-carrusel"></div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>AquaNet@gmail.com</p>
+                <p>Mendoza, Argentina</p>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            © 2025 AquaNet — Todos los derechos reservados
+        </div>
+    </footer>
+
+    <div class="espacio-carrusel"></div>
 </body>
- 
- <!--
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap%22>
-  </script>-->
-  
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
-  </script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
+    </script>
 
 <script src="/AquaNet/js/home.js"></script>
- <script src="/AquaNet/js/carousel.js"></script>
- 
+<script src="/AquaNet/js/carousel.js"></script>
+
 </html>

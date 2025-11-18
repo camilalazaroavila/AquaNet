@@ -9,72 +9,13 @@ body {
     background:  #d5e4f5;
     color: #333;
 }
- .espacio-carrusel {
-    height: 150px;
-}
-.encabezado {
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
- 
-.contenedor-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-}
- 
-.btn-menu {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #2563eb;
-    padding: 0.5rem;
-}
- 
-.logo {
-    font-size: 1.8rem;
-    color: #2563eb;
-    font-weight: bold;
-}
- 
-.navegacion {
-    display: flex;
-    gap: 2rem;
-    flex: 1;
-    justify-content: center;
-}
- 
-.navegacion a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: all 0.3s;
-}
- 
-.navegacion a:hover {
-    background-color: #f0f4f8;
-}
- 
-.navegacion a.activo {
-    color: #2563eb;
-    border-bottom: 2px solid #2563eb;
-}
- 
+
 .usuario {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 20px;
 }
- 
+
 .icono-usuario {
     width: 40px;
     height: 40px;

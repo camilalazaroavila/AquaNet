@@ -141,6 +141,7 @@ body {
 }
 
 
+
 @media (max-width: 1024px) {
     .grid-voluntariados {
         grid-template-columns: 1fr;

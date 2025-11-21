@@ -1,0 +1,141 @@
+
+.botones-laterales {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.btn-reportar {
+    background-color: #ff8bb1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-reportar:hover {
+    box-shadow: 0 8px 20px rgb(165, 104, 137);
+}
+
+.btn-caudal {
+    height: 55px;
+    background-color: #79c8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-caudal:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
+}
+
+.btn-cortes {
+    height: 55px;
+    background-color: #79c8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cortes:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
+}
+
+.icono-boton {
+    width: 22px;
+    height: 22px;
+}
+
+
+
+.botones-laterales {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    flex-direction: column; 
+    gap: 12px;             
+    z-index: 9999;
+}
+
+.btn-reportar,
+.btn-caudal,
+.btn-cortes {
+    width: 140px;           
+    padding: 8px 12px;
+    font-size: 13px;
+    flex-direction: column; 
+    gap: 4px;
+}
+
+.icono-boton {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .botones-laterales {
+        position: static;       
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn-reportar,
+    .btn-caudal,
+    .btn-cortes {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .icono-boton {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-reportar,
+    .btn-caudal,
+    .btn-cortes {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .icono-boton {
+        width: 18px;
+        height: 18px;
+    }
+}

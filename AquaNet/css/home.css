@@ -153,6 +153,27 @@ fieldset {
     box-shadow: 0 8px 20px rgb(92, 151, 179);
 }
 
+.btn-cortes {
+    height: 55px;
+    background-color: #79c8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cortes:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
+}
+
 .icono-boton {
     width: 22px;
     height: 22px;
@@ -381,7 +402,8 @@ textarea {
     }
 
     .btn-reportar,
-    .btn-caudal {
+    .btn-caudal,
+    .btn-cortes {
         width: 90%;
     }
 
@@ -420,7 +442,8 @@ textarea {
 @media (max-width: 400px) {
 
     .btn-reportar,
-    .btn-caudal {
+    .btn-caudal,
+    .btn-cortes {
         width: 100%;
         font-size: 14px;
     }

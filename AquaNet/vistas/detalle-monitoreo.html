@@ -164,8 +164,54 @@
             </section>
 
             <div class="contenedor-boton">
-                <button class="boton-inscribirse">INSCRIBIRSE</button>
+                <button class="boton-inscribirse"  onclick="abrirModal()">Sumarme como voluntario/a</button>
             </div>
+            <div id="modalInscripcion" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+        <h2>Sumate al voluntariado</h2>
+
+        <form>
+
+            <label>Nombre completo:</label>
+            <input type="text" name="nombre" required>
+
+            <label>DNI / Documento:</label>
+            <input type="text" name="dni" required>
+
+            <label>Fecha de nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" required>
+
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" required>
+
+            <label>Correo electrónico:</label>
+            <input type="email" name="email" required>
+
+            <div class="seccion">
+                    <label>Selecciona tu zona:</label>
+                    <select id="zonaSelect" name="zonaSelect">
+                        <option value="">-- Selecciona --</option>
+                        <option>Mendoza centro</option>
+                        <option>San Rafael</option>
+                        <option>Tunuyan</option>
+                    </select>
+                </div>
+
+            <p>Categoría del voluntariado:</p>
+
+            <label><input type="checkbox" name="categoria" value="Monitoreo de agua" checked><i class="fa-solid fa-droplet" style="color: #74C0FC;"></i> Monitoreo del agua</label><br>
+            <label><input type="checkbox" name="categoria" value="Educación y concientización"><i class="fa-solid fa-book" style="color: #63E6BE;"></i> Educación y concientización</label><br>
+            <label><input type="checkbox" name="categoria" value="Tecnología y datos"><i class="fa-solid fa-computer"></i> Tecnología y datos</label><br>
+            <label><input type="checkbox" name="categoria" value="Limpieza ambiental"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></i> Limpieza ambiental</label><br>
+            <label><input type="checkbox" name="categoria" value="Apoyo comunitario"><i class="fa-solid fa-handshake" style="color: #ffc905;"></i> Apoyo comunitario</label><br>
+
+            <br>
+            <button type="submit" class="boton-enviar">Enviar inscripción</button>
+        </form>
+    </div>
+</div>
         </div>
 
         <div class="carousel-flotante">
@@ -263,4 +309,5 @@
 
 </body>
 <script src="../js/carousel.js"></script>
+<script src="../js/voluntariado.js"></script>
 </html>

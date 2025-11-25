@@ -126,7 +126,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(23, 61, 44, 0.712);
+  background: rgba(19, 49, 35, 0.795);
   z-index: 1;
   transition: 0.3s ease;
 }
@@ -137,7 +137,7 @@ body {
 }
 
 .tarjeta-voluntariado:hover .overlay {
-  background: rgba(23, 65, 45, 0.918);
+  background: rgba(12, 34, 23, 0.945);
 }
 
 

@@ -29,6 +29,7 @@
     position: relative;
     width: 300px;
     margin: 0 auto;
+    margin-top: 1em;
 }
 
 fieldset {
@@ -323,7 +324,42 @@ textarea {
     height: 180px;
     border-radius: 10px;
 }
+.banner {
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.35),  
+        rgba(0, 0, 0, 0.15),   
+        rgba(0, 0, 0, 0.00)    
+    ), 
+    url("../img/imagenInicio.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    height: 180px; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;      
+    
+    text-align: center;
+    color: white;
+    padding: 0 20px; 
+}
+.banner h3 {
+    font-size:35px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+.banner p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
 
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
 @media (max-width: 992px) {
 
     .encabezado .contenedor {

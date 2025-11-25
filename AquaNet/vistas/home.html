@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/cortes.css">
+    <link rel="stylesheet" href="../css/botonesFlotantes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-
 
     <header class="encabezado">
         <div class="contenedor">
@@ -37,13 +37,10 @@
     </header>
     
     <div class="banner">
-     <h3>Cuidemos juntos el agua de Mendoza</h3>
-     <p>Consultá cortes, disponibilidad por zonas y consejos para reducir el consumo.</p>
-     <!--<div class="titulo-pagina">
-       <p id="texto-titulo-principal">Cuidemos juntos el agua de Mendoza</p> -->
+        <h3>Cuidemos juntos el agua de Mendoza</h3>
+        <p>Consultá cortes, disponibilidad por zonas y consejos para reducir el consumo.</p>
 
         <div class="seccion">
-          <!--  <p id="texto-titulo">Consultá el estado del agua de tu zona</p>-->
             <label></label>
             <select id="zonaSelect1" name="zonaSelect">
                 <option value="">Seleccioná tu zona</option>
@@ -61,51 +58,53 @@
         </div>
     </div>
 
-
-    <div class="contenedor-mapa">
-        <gmp-map center="-32.889458,-68.845839" zoom="12" map-id="DEMO_MAP_ID" style="height: 400px; width: 100%;">
-        </gmp-map>
-    </div>
-
-    <div class="filtros-container">
-
+    <!-- NUEVA ESTRUCTURA: Botones | Mapa | Filtros -->
+    <div class="mapa-principal-container">
+        <div class="contenedor-mapa">
+            <gmp-map center="-32.889458,-68.845839" zoom="12" map-id="DEMO_MAP_ID" style="height: 400px; width: 100%;">
+            </gmp-map>
+        </div>
+        
         <div class="filtros-box">
-            <h3>Filtrar búsqueda</h3>
+            <div>
+                <h3>Filtrar búsqueda</h3>
 
-            <div class="filtro-grupo">
-                <label class="check-item">
-                    <input type="checkbox" checked>
-                    Cortes programados
-                </label>
+                <div class="filtro-grupo">
+                    <label class="check-item">
+                        <input type="checkbox" checked>
+                        Cortes programados
+                    </label>
 
-                <label class="check-item">
-                    <input type="checkbox">
-                    Zonas con más reportes
-                </label>
-            </div>
+                    <label class="check-item">
+                        <input type="checkbox">
+                        Zonas con más reportes
+                    </label>
+                </div>
 
-            <div class="filtro-grupo">
-                <label class="radio-item">
-                    <input type="checkbox" checked>
-                    Caudal actual
-                </label>
+                <div class="filtro-grupo">
+                    <label class="radio-item">
+                        <input type="checkbox" checked>
+                        Caudal actual
+                    </label>
 
-                <label class="radio-item">
-                    <input type="radio" name="caudal">
-                    Poco caudal
-                </label>
+                    <label class="radio-item">
+                        <input type="radio" name="caudal">
+                        Poco caudal
+                    </label>
 
-                <label class="radio-item">
-                    <input type="radio" name="caudal">
-                    Caudal normal
-                </label>
+                    <label class="radio-item">
+                        <input type="radio" name="caudal">
+                        Caudal normal
+                    </label>
 
-                <label class="radio-item">
-                    <input type="radio" name="caudal" checked>
-                    Caudal alto
-                </label>
+                    <label class="radio-item">
+                        <input type="radio" name="caudal" checked>
+                        Caudal alto
+                    </label>
+                </div>
             </div>
         </div>
+
 
         <div class="botones-laterales">
             <button class="btn-reportar">
@@ -118,63 +117,197 @@
                 CORTES PROGRAMADOS
             </button>
         </div>
-
-        <div id="modal-reporte" class="modal-overlay">
-            <div class="modal-contenido">
-
-                <button class="modal-back" id="cerrarModal">
-                    ⟵
-                </button>
-
-                <h2 class="modal-titulo">Reporte</h2>
-
-                <div class="seccion">
-                    <h3>Caudal actual</h3>
-
-                    <label class="opcion">
-                        <input type="radio" name="caudal" value="bajo">
-                        <span class="circulo bajo"></span>Poco caudal
-                    </label>
-
-                    <label class="opcion">
-                        <input type="radio" name="caudal" value="normal">
-                        <span class="circulo normal"></span>Caudal normal
-                    </label>
-
-                    <label class="opcion">
-                        <input type="radio" name="caudal" value="alto">
-                        <span class="circulo alto"></span>Caudal alto
-                    </label>
-                </div>
-
-                <div class="seccion mapa-box">
-                    <div id="modalMap" class="mapa"></div>
-                </div>
-
-                <div class="seccion">
-                    <label>Selecciona tu zona:</label>
-                    <select id="zonaSelect" name="zonaSelect">
-                        <option value="">-- Selecciona --</option>
-                        <option>Mendoza centro</option>
-                        <option>San Rafael</option>
-                        <option>Tunuyan</option>
-                    </select>
-                </div>
-
-                <div class="seccion">
-                    <label>Motivo de tu reporte:</label>
-                    <textarea id="motivo" rows="3"></textarea>
-                </div>
-
-                <p class="mensaje-login">Debes <a href="../vistas/home.html">iniciar sesión</a> para hacer reportes</p>
-
-                <button class="btn-enviar" disabled>Enviar reporte</button>
-
-            </div>
-        </div>
-
+    
+        
     </div>
 
+    <!-- NUEVA SECCIÓN: Consejos y Normas -->
+    <section class="seccion-consejos">
+        <h2 class="titulo-seccion">Cuidá el agua: Consejos y normativas</h2>
+        
+        <div class="grid-consejos">
+            <!-- Tarjeta grande destacada -->
+            <div class="tarjeta-consejo tarjeta-grande destacada">
+                <div class="tarjeta-imagen" style="background-image: url('../img/voluntariados-cerca.jpg');">
+                    <div class="overlay"></div>
+                </div>
+                <div class="tarjeta-contenido">
+                    <h3><i class="fas fa-balance-scale"></i> Ley Provincial 6405</h3>
+                    <p>La ley fundamental que regula el uso del agua en Mendoza. Establece que el agua es un bien público y prioriza su uso para consumo humano sobre otros usos.</p>
+                    <a href="#" class="link-mas-info">Ver normativa completa →</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta mediana -->
+            <div class="tarjeta-consejo tarjeta-mediana">
+                <div class="icono-tarjeta" style="background: #63a9e6;">
+                    <i class="fas fa-shower"></i>
+                </div>
+                <h3>Reducí el tiempo en la ducha</h3>
+                <p>Cinco minutos menos pueden ahorrar hasta 95 litros de agua por ducha.</p>
+            </div>
+
+            <!-- Tarjeta mediana -->
+            <div class="tarjeta-consejo tarjeta-mediana">
+                <div class="icono-tarjeta" style="background: #ff8bb1;">
+                    <i class="fas fa-faucet"></i>
+                </div>
+                <h3>Cerrá la canilla</h3>
+                <p>Al lavarte los dientes o enjabonar los platos, cada minuto con la canilla abierta gasta 12 litros.</p>
+            </div>
+
+            <!-- Tarjeta pequeña con imagen -->
+            <div class="tarjeta-consejo tarjeta-pequena con-imagen">
+                <div class="tarjeta-imagen-mini" style="background-image: url('../img/apoyo-comunitario.png');"></div>
+                <div class="tarjeta-contenido-mini">
+                    <h4>Riego eficiente</h4>
+                    <p>Regá temprano o al atardecer para evitar evaporación.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta pequeña con ícono -->
+            <div class="tarjeta-consejo tarjeta-mediana">
+                <div class="icono-tarjeta" style="background: #5a9bd5;">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Reutilizá agua</h3>
+                <p>El agua de enjuague puede servir para regar plantas.</p>
+            </div>
+
+
+            <!-- Tarjeta mediana -->
+            <div class="tarjeta-consejo tarjeta-mediana">
+                <div class="icono-tarjeta" style="background: #ff6b9d;">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Lavado de autos</h3>
+                <p>Usá balde en lugar de manguera. Ahorrás hasta 300 litros por lavado.</p>
+            </div>
+
+            <div class="tarjeta-consejo tarjeta-mediana">
+                <div class="icono-tarjeta" style="background: #365381;">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <h3>Turnos de riego</h3>
+                    <p>El Departamento General de Irrigación establece turnos obligatorios según zona y tipo de cultivo. Consultá tu calendario de turnos para evitar sanciones.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-consejo tarjeta-pequena">
+                <div class="icono-tarjeta" style="background: #79c8ff;">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h4>Reparar fugas</h4>
+                <p>Una canilla que gotea pierde 30 litros por día.</p>
+            </div>
+
+            <!-- Tarjeta destacada con estadística -->
+            <div class="tarjeta-consejo tarjeta-estadistica">
+                <div class="numero-grande">40%</div>
+                <h3>Reducción posible</h3>
+                <p>Con hábitos responsables, una familia puede reducir hasta un 40% su consumo de agua sin afectar su calidad de vida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Reporte -->
+    <div id="modal-reporte" class="modal-overlay">
+        <div class="modal-contenido">
+            <button class="modal-back" id="cerrarModal">⟵</button>
+            <h2 class="modal-titulo">Reporte</h2>
+
+            <div class="seccion">
+                <h3>Caudal actual</h3>
+                <label class="opcion">
+                    <input type="radio" name="caudal" value="bajo">
+                    <span class="circulo bajo"></span>Poco caudal
+                </label>
+                <label class="opcion">
+                    <input type="radio" name="caudal" value="normal">
+                    <span class="circulo normal"></span>Caudal normal
+                </label>
+                <label class="opcion">
+                    <input type="radio" name="caudal" value="alto">
+                    <span class="circulo alto"></span>Caudal alto
+                </label>
+            </div>
+
+            <div class="seccion mapa-box">
+                <div id="modalMap" class="mapa"></div>
+            </div>
+
+            <div class="seccion">
+                <label>Selecciona tu zona:</label>
+                <select id="zonaSelect" name="zonaSelect">
+                    <option value="">-- Selecciona --</option>
+                    <option>Mendoza centro</option>
+                    <option>San Rafael</option>
+                    <option>Tunuyan</option>
+                </select>
+            </div>
+
+            <div class="seccion">
+                <label>Motivo de tu reporte:</label>
+                <textarea id="motivo" rows="3"></textarea>
+            </div>
+
+            <p class="mensaje-login">Debes <a href="../vistas/home.html">iniciar sesión</a> para hacer reportes</p>
+            <button class="btn-enviar" disabled>Enviar reporte</button>
+        </div>
+    </div>
+
+    <div id="modal-cortes" class="modal-overlay">
+        <div class="modal-contenido">
+
+            <button class="modal-back" id="cerrarModalCortes">⟵</button>
+
+            <h2 class="modal-titulo">Cortes programados</h2>
+
+            <div class="modal-grid">
+
+                <div class="panel">
+                    <div class="panel-header cortes-header">Cortes programados</div>
+
+                    <div class="cortes-grid">
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> Las Heras</p>
+                            <p><strong>Horario:</strong> 13:00 a 15:00</p>
+                            <p><strong>Motivo:</strong> Reparaciones</p>
+                        </div>
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> Lavalle</p>
+                            <p><strong>Horario:</strong> 09:00 a 12:00</p>
+                            <p><strong>Motivo:</strong> Mantenimiento</p>
+                        </div>
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> San Carlos</p>
+                            <p><strong>Horario:</strong> 17:00 a 20:00</p>
+                            <p><strong>Motivo:</strong> Reemplazo de cañerías</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header consejos-header">Consejos</div>
+
+                    <p class="consejo">• Organizar tareas del hogar antes del corte (duchas, limpieza, cocina).</p>
+                    <p class="consejo">• Cerrar bien todos los grifos para evitar salidas de agua inesperadas cuando
+                        vuelva el suministro.</p>
+                    <p class="consejo">• Usar el agua almacenada con prudencia, priorizando lo esencial.</p>
+                    <p class="consejo">• Reutilizar el agua cuando sea posible, por ejemplo para limpieza o riego.</p>
+                    <p class="consejo">• Desconectar aparatos que usen agua, como lavadoras o lavavajillas, durante el
+                        corte.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-contenido">
@@ -191,26 +324,20 @@
                     <li><a href="#">Ayuda</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <p>AquaNet@gmail.com</p>
                 <p>Mendoza, Argentina</p>
             </div>
         </div>
-
         <div class="footer-copy">
             © 2025 AquaNet — Todos los derechos reservados
         </div>
     </footer>
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/botonesFlotantes.js"></script>
+
 </body>
-
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuZk8_GZfsEWY3_NQu9_-zoiWhVFKHhxQ&callback=initMap">
-    </script>
-
-<script src="../js/home.js"></script>
-<script src="../js/botonesFlotantes.js"></script>
-
 </html>

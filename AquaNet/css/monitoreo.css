@@ -5,13 +5,32 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(180deg, #d4e3f7 0%, #e8f0fc 100%);
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:  #d5e4f5;
+    color: #333;
 }
-.espacio-carrusel {
-    height: 150px;
+
+.contenido-principal{
+    padding-top: 30px;
 }
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono-usuario {
+    width: 40px;
+    height: 40px;
+    background-color: #94a3b8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .encabezado {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -25,53 +44,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    color: #2563eb;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.navegacion {
-    display: flex;
-    gap: 2rem;
-}
-
-.navegacion a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s;
-}
-
-.navegacion a.activo {
-    border-bottom-color: #333;
-}
-
-.navegacion a:hover {
-    color: #2563eb;
-}
-
-.menu-usuario {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.icono-usuario {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #333;
-    background: white;
-}
-
-.contenido-principal {
-    padding: 2rem 0;
 }
 
 .contenedor-fluido {
@@ -89,8 +61,8 @@ body {
 }
 
 .banner-principal {
-    background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)), 
-                linear-gradient(135deg, #4a7c2c 0%, #5a8c3c 100%);
+    background: linear-gradient(rgba(46, 85, 59, 0.747), rgba(97, 143, 112, 0.925)), 
+                linear-gradient(135deg, #529450 0%, #66a542b7 100%);
     border-radius: 12px;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
@@ -128,6 +100,7 @@ body {
 }
 
 .encabezado-seccion h2 {
+    
     color: #2d5016;
     font-size: 1.5rem;
     font-weight: 700;

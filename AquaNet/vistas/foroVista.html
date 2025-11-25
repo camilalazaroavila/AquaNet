@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaNet - Foro</title>
     <link rel="stylesheet" href="../css/foro.css">
     <link rel="stylesheet" href="../css/foroActualizado.css">
-    <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/botonesFlotantes.css">
+    <link rel="stylesheet" href="../css/cortes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
     </style>
 </head>
+
 <body>
     <header class="encabezado">
-    <div class="contenedor">
-      <h1 class="logo">
-        ☰<a href="../vistas/home.html" class="return-home"><span class="aqua">Aqua</span><span
-            class="net">Net</span></a>
-      </h1>
-      <nav class="navegacion">
-        <a href="../vistas/voluntariadoVista.html">Voluntariados</a>
-        <a href="../vistas/foroVista.html" class="activo">Foro</a>
-        <a href="#donaciones">Donaciones</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#ayuda">Ayuda</a>
-      </nav>
-      <div class="usuario">
-        <span>Usuario</span>
-        <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
-      </div>
-    </div>
-  </header>
- 
+        <div class="contenedor">
+            <h1 class="logo">
+                ☰<a href="../vistas/home.html" class="return-home"><span class="aqua">Aqua</span><span
+                        class="net">Net</span></a>
+            </h1>
+            <nav class="navegacion">
+                <a href="../vistas/voluntariadoVista.html">Voluntariados</a>
+                <a href="../vistas/foroVista.html" class="activo">Foro</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#ayuda">Ayuda</a>
+            </nav>
+            <div class="usuario">
+                <span>Usuario</span>
+                <div class="icono-usuario"><i class="fa-solid fa-user"></i></div>
+            </div>
+        </div>
+    </header>
+
     <main class="contenido-principal">
-        <a href="../vistas/home.html" class="btn-volver">← Volver</a>
- 
+       
+        <div class="semiNav">
+            <a href="../vistas/home.html" class="btn-volver">← Volver</a>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar..." class="input-busqueda">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
         <div class="contenedor-foro">
             <aside class="barra-lateral">
                 <h2 class="titulo-foro">Foro</h2>
-               
+
                 <div class="seccion-filtros">
                     <div class="encabezado-filtro">
-                       <!-- <img src="../img/filter.svg" alt="Filtrar"> -->
+                        <!-- <img src="../img/filter.svg" alt="Filtrar"> -->
                         <i class="fa-solid fa-arrow-down-short-wide"></i>
                         <span>Filtrar por</span>
                     </div>
- 
+
                     <div class="grupo-filtro">
                         <label for="filtro-zona">Zona</label>
                         <select id="filtro-zona" class="selector-filtro">
@@ -64,7 +73,7 @@
                             <option value="san-carlos">San Carlos</option>
                         </select>
                     </div>
- 
+
                     <div class="grupo-filtro">
                         <label for="filtro-problema">Problema</label>
                         <select id="filtro-problema" class="selector-filtro">
@@ -78,29 +87,22 @@
                     </div>
                 </div>
             </aside>
- 
-           
+
             <section class="area-publicaciones">
                 <button class="btn-agregar-publicacion">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
- 
+
                 <div class="barra-superior">
                     <div class="pestanas">
                         <button class="pestana activa">Últimas publicaciones</button>
-                        <!--<button class="pestana">Vistos</button>
-                        <button class="pestana">Comentarios</button> -->
-                    </div>
-                    <div class="busqueda">
-                        <input type="text" placeholder="Buscar..." class="input-busqueda">
-                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
- 
+
                 <div class="lista-publicaciones">
                     <article class="publicacion">
                         <div class="avatar-usuario">
-                           <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user"></i>
                         </div>
                         <div class="contenido-publicacion">
                             <p class="nombre-usuario">Nara Martínez</p>
@@ -118,8 +120,8 @@
                         </div>
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
- 
-                   
+
+
                     <article class="publicacion">
                         <div class="avatar-usuario"><i class="fa-solid fa-user"></i></i></div>
                         <div class="contenido-publicacion">
@@ -138,7 +140,7 @@
                         </div>
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
- 
+
                     <article class="publicacion">
                         <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
@@ -157,7 +159,7 @@
                         </div>
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
- 
+
                     <article class="publicacion">
                         <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
@@ -176,7 +178,7 @@
                         </div>
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
- 
+
                     <article class="publicacion">
                         <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
@@ -195,7 +197,7 @@
                         </div>
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
- 
+
                     <article class="publicacion">
                         <div class="avatar-usuario"><i class="fa-solid fa-user"></i></div>
                         <div class="contenido-publicacion">
@@ -215,100 +217,112 @@
                         <button class="btn-compartir"><i class="fa-solid fa-share-nodes"></i></button>
                     </article>
                 </div>
+                <div class="mostrarMas">
+                    <p><a href="#">Mostrar más</a></p>
+                </div>
             </section>
         </div>
+
     </main>
- 
- 
-    <div class="carousel-flotante">
-<div class="contenedor-carousel">
-  <button class="nav-arrow izq" onclick="moveSlide(-1)">‹</button>
 
-  <div class="slides-viewport">
-    <div class="slides" id="slides">
-      
-      <div class="slide">
-        <div class="panel cortes">
-          <div class="panel-header">
-            <span class="title">Cortes programados</span>
-          </div>
-          <div class="panel-body">
-            <p><strong>Zona:</strong> Las Heras</p>
-            <p><strong>Horario:</strong> 13:00 a 15:00</p>
-            <p><strong>Motivo:</strong> Reparaciones</p>
-          </div>
-        </div>
-        <div class="panel consejos">
-          <div class="panel-header">
-            <span class="title">Consejos</span>
-          </div>
-          <div class="panel-body">
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="slide">
-        <div class="panel cortes">
-          <div class="panel-header">
-            <span class="title">Cortes programados</span>
-          </div>
-          <div class="panel-body">
-            <p><strong>Zona:</strong> Lavalle</p>
-            <p><strong>Horario:</strong> 09:00 a 11:00</p>
-            <p><strong>Motivo:</strong> Mantenimiento </p>
-          </div>
-        </div>
+    <div class="botones-laterales">
+        <button class="btn-reportar">
+            <img src="../img/reportar.png" class="icono-boton" alt="">
+            REPORTAR<br>PROBLEMA
+        </button>
 
-        <div class="panel consejos">
-          <div class="panel-header">
-            <span class="title">Consejos</span>
-          </div>
-          <div class="panel-body">
-             <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-            <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <button class="nav-arrow der" onclick="moveSlide(1)">›</button>
-</div>
-  </div>
-</div>
-</div>
-<footer class="footer">
-    <div class="footer-contenido">
-        <div class="footer-col">
-            <h4>AquaNet</h4>
-        </div>
-        <div class="footer-col">
-            <h4>Navegación</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Voluntariados</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Foro</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p>AquaNet@gmail.com</p>
-            <p>Mendoza, Argentina</p>
-        </div>
+        <button class="btn-cortes">
+            <img src="../img/caudal.png" class="icono-boton" alt="">
+            CORTES PROGRAMADOS
+        </button>
     </div>
 
-    <div class="footer-copy">
-        © 2025 AquaNet — Todos los derechos reservados
-    </div>
-</footer>
 
-<div class="espacio-carrusel"></div>
-<script src="../js/carousel.js"></script>
+
+    </div>
+
+
+    <div id="modal-cortes" class="modal-overlay">
+        <div class="modal-contenido">
+
+            <button class="modal-back" id="cerrarModalCortes">⟵</button>
+
+            <h2 class="modal-titulo">Cortes programados</h2>
+
+            <div class="modal-grid">
+
+                <div class="panel">
+                    <div class="panel-header cortes-header">Cortes programados</div>
+
+                    <div class="cortes-grid">
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> Las Heras</p>
+                            <p><strong>Horario:</strong> 13:00 a 15:00</p>
+                            <p><strong>Motivo:</strong> Reparaciones</p>
+                        </div>
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> Lavalle</p>
+                            <p><strong>Horario:</strong> 09:00 a 12:00</p>
+                            <p><strong>Motivo:</strong> Mantenimiento</p>
+                        </div>
+
+                        <div class="corte-item">
+                            <p><strong>Zona:</strong> San Carlos</p>
+                            <p><strong>Horario:</strong> 17:00 a 20:00</p>
+                            <p><strong>Motivo:</strong> Reemplazo de cañerías</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header consejos-header">Consejos</div>
+
+                    <p class="consejo">• Organizar tareas del hogar antes del corte (duchas, limpieza, cocina).</p>
+                    <p class="consejo">• Cerrar bien todos los grifos para evitar salidas de agua inesperadas cuando
+                        vuelva el suministro.</p>
+                    <p class="consejo">• Usar el agua almacenada con prudencia, priorizando lo esencial.</p>
+                    <p class="consejo">• Reutilizar el agua cuando sea posible, por ejemplo para limpieza o riego.</p>
+                    <p class="consejo">• Desconectar aparatos que usen agua, como lavadoras o lavavajillas, durante el
+                        corte.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h4>AquaNet</h4>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Voluntariados</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Foro</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>AquaNet@gmail.com</p>
+                <p>Mendoza, Argentina</p>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            © 2025 AquaNet — Todos los derechos reservados
+        </div>
+    </footer>
+
+    <script src="../js/botonesFlotantes.js"></script>
+</body>
+
+</html>

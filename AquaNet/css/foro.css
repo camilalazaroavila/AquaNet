@@ -86,10 +86,6 @@ body {
     background: white;
 }
  
-.contenido-principal {
-    padding: 2rem 0;
-}
- 
 .contenedor-fluid {
     max-width: 1400px;
     margin: 0 auto;
@@ -336,8 +332,7 @@ body {
 .boton-publicar:hover {
     background: #2d4373;
 }
- 
- 
+
 @media (max-width: 1024px) {
     .encabezado .contenedor {
         padding: 0 1.5rem;

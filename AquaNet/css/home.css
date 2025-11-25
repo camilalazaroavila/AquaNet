@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .titulo-pagina {
     text-align: center;
 }
 
 #texto-titulo {
-    font-size: 22px;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+#texto-titulo-principal {
+    font-size: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico';
+    color: rgb(59, 104, 146);
 }
 
 .body {
@@ -15,7 +25,7 @@
     height: 150px;
 }
 
-.search-box {
+#zonaSelect1 {
     position: relative;
     width: 300px;
     margin: 0 auto;
@@ -24,28 +34,6 @@
 fieldset {
     border: none;
 }
-
-.search-img {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    pointer-events: none;
-}
-
-#search-input {
-    width: 100%;
-    padding: 10px 14px 10px 40px;
-    font-size: 15px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    outline: none;
-    background-color: #f9faff;
-    color: #333;
-}
-
 
 .contenedor-mapa {
     width: 90%;
@@ -132,7 +120,7 @@ fieldset {
     box-shadow: 0 8px 20px rgb(165, 104, 137);
 }
 
-.btn-caudal {
+.btn-cortes {
     height: 55px;
     background-color: #79c8ff;
     color: white;
@@ -149,7 +137,7 @@ fieldset {
     gap: 8px;
 }
 
-.btn-caudal:hover {
+.btn-cortes:hover {
     box-shadow: 0 8px 20px rgb(92, 151, 179);
 }
 
@@ -307,6 +295,27 @@ textarea {
     font-size: 17px;
     border-radius: 12px;
     cursor: not-allowed;
+}
+
+.btn-cortes {
+    height: 55px;
+    background-color: #79c8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 180px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cortes:hover {
+    box-shadow: 0 8px 20px rgb(92, 151, 179);
 }
 
 #modalMap {

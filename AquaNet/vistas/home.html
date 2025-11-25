@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/foro.css">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cortes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
@@ -26,7 +26,6 @@
             <nav class="navegacion">
                 <a href="../vistas/voluntariadoVista.html">Voluntariados</a>
                 <a href="../vistas/foroVista.html">Foro</a>
-                <a href="#donaciones">Donaciones</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#ayuda">Ayuda</a>
             </nav>
@@ -38,16 +37,25 @@
     </header>
 
     <div class="titulo-pagina">
-        <p id="texto-titulo"><strong>Conoce el estado del agua donde vivis</strong> </p><br>
+        <p id="texto-titulo-principal">Cuidemos juntos el agua de Mendoza</p>
 
-        <form id="search-form" method="get">
-            <fieldset>
-                <div class="search-box">
-                    <img class="search-img" src="../img/lupa.png" alt="">
-                    <input type="text" id="search-input" name="q" placeholder="Buscá tu zona">
-                </div>
-            </fieldset>
-        </form>
+        <div class="seccion">
+            <p id="texto-titulo">Consultá el estado del agua de tu zona</p>
+            <label></label>
+            <select id="zonaSelect1" name="zonaSelect">
+                <option value="">Seleccioná tu zona</option>
+                <option value="lavalle">Lavalle</option>
+                <option value="general-alvear">General Alvear</option>
+                <option value="ciudad-mendoza">Ciudad de Mendoza</option>
+                <option value="godoy-cruz">Godoy Cruz</option>
+                <option value="guaymallen">Guaymallén</option>
+                <option value="las-heras">Las Heras</option>
+                <option value="lujan-cuyo">Luján de Cuyo</option>
+                <option value="maipu">Maipú</option>
+                <option value="tunuyan">Tunuyán</option>
+                <option value="san-carlos">San Carlos</option>
+            </select>
+        </div>
     </div>
 
 
@@ -102,9 +110,9 @@
                 REPORTAR<br>PROBLEMA
             </button>
 
-            <button class="btn-caudal">
+            <button class="btn-cortes">
                 <img src="../img/caudal.png" class="icono-boton" alt="">
-                CAUDAL
+                CORTES PROGRAMADOS
             </button>
         </div>
 
@@ -164,68 +172,7 @@
 
     </div>
 
-    <div class="carousel-flotante">
-        <div class="contenedor-carousel">
-            <button class="nav-arrow izq" onclick="moveSlide(-1)">‹</button>
 
-            <div class="slides-viewport">
-                <div class="slides" id="slides">
-
-                    <div class="slide">
-                        <div class="panel cortes">
-                            <div class="panel-header">
-                                <span class="title">Cortes programados</span>
-                            </div>
-                            <div class="panel-body">
-                                <p><strong>Zona:</strong> Las Heras</p>
-                                <p><strong>Horario:</strong> 13:00 a 15:00</p>
-                                <p><strong>Motivo:</strong> Reparaciones</p>
-                            </div>
-                        </div>
-                        <div class="panel consejos">
-                            <div class="panel-header">
-                                <span class="title">Consejos</span>
-                            </div>
-                            <div class="panel-body">
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="panel cortes">
-                            <div class="panel-header">
-                                <span class="title">Cortes programados</span>
-                            </div>
-                            <div class="panel-body">
-                                <p><strong>Zona:</strong> Lavalle</p>
-                                <p><strong>Horario:</strong> 09:00 a 11:00</p>
-                                <p><strong>Motivo:</strong> Mantenimiento </p>
-                            </div>
-                        </div>
-
-                        <div class="panel consejos">
-                            <div class="panel-header">
-                                <span class="title">Consejos</span>
-                            </div>
-                            <div class="panel-body">
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                                <p>textoalazarescritoparatesteatarcomoseveriaenlapantallalostextos</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <button class="nav-arrow der" onclick="moveSlide(1)">›</button>
-        </div>
-    </div>
-    </div>
-    </div>
     <footer class="footer">
         <div class="footer-contenido">
             <div class="footer-col">
@@ -254,7 +201,6 @@
         </div>
     </footer>
 
-    <div class="espacio-carrusel"></div>
 </body>
 
 <script async defer
@@ -262,6 +208,6 @@
     </script>
 
 <script src="../js/home.js"></script>
-<script src="../js/carousel.js"></script>
+<script src="../js/botonesFlotantes.js"></script>
 
 </html>
